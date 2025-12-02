@@ -12,7 +12,7 @@
   <header class="site-header">
     <div class="logo">
       <h1>Kosár</h1>
-      <p>itt látod, mit szeretnél megrendelni</p>
+      <p>itt látod, mit tettél a kosárba</p>
     </div>
     <nav class="main-nav">
       <a href="index.html">Főoldal</a>
@@ -26,10 +26,27 @@
 
   <main class="content">
     <section class="text-block">
-      <h2>Jelenlegi kosarad</h2>
-      <p>Ez egy egyszerű összefoglaló oldal. Ha szeretnéd, később hozzáadhatunk teljesen működő kosár‑logikát (mennyiségek, árak, törlés).</p>
+      <h2>Kosár tartalma</h2>
 
-      <p><strong>Javasolt használat most:</strong> írd be ide szövegesen, milyen táskákat szeretnél (pl. „1× pasztell válltáska, 1× fekete shopper”), és a rendelés oldalon lesz egy űrlap, ahol megadod az adataidat.</p>
+      <div class="cart-wrapper">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Termék</th>
+              <th>Mennyiség</th>
+              <th>Egységár</th>
+              <th>Részösszeg</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-table-body">
+            <!-- script.js tölti fel -->
+          </tbody>
+        </table>
+
+        <p id="cart-summary" style="margin-top:12px;font-weight:600;"></p>
+        <p style="margin-top:6px;">A rendelést a <a href="rendeles.html">Rendelés</a> oldalon tudod véglegesíteni.</p>
+      </div>
     </section>
   </main>
 
