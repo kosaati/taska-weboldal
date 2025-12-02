@@ -1,98 +1,58 @@
-<!-- index.html tartalom ide --><!-- USER PROVIDED CONTENT -->
-const card=document.createElement('div');card.className='card';
-card.innerHTML=`<img src="${p.img}" alt="${p.title}"><h3>${p.title}</h3><p>${formatFt(p.price)}</p><div style="margin-top:12px"><button class='btn' data-add='${p.id}'>Kosárba</button> <a class='btn' href='galeria.html' style='background:#fff;border:1px solid var(--accent);color:var(--accent)'>Részletek</a></div>`;
-container.appendChild(card);
-});
-}
-
-
-// --- CART LOGIC (localStorage) ---
-const CART_KEY='wk_cart_v1';
-function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY))||[];}catch(e){return []}}
-function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c));updateCartCount()}
-function addToCart(productId){const p=PRODUCTS.find(x=>x.id===productId);if(!p)return;const cart=getCart();const found=cart.find(i=>i.id===productId);if(found){found.q++;}else{cart.push({id:p.id,title:p.title,price:p.price,q:1})}saveCart(cart);alert(p.title+' hozzáadva a kosárhoz');}
-function updateCartCount(){const cart=getCart();const total=cart.reduce((s,i)=>s+i.q,0);document.getElementById('cart-count').textContent=total}
-
-
-// event delegation for add buttons
-document.addEventListener('click',e=>{const btn=e.target.closest('[data-add]');if(btn){addToCart(btn.getAttribute('data-add'))}})
-
-
-// initialize
-renderProducts();updateCartCount();
-
-
-</script>
-</body>
-</html>
-
-
-
-
-<!-- rolam.html -->
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rólam</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{--pink-1:#fff0f6;--accent:#ff69b4}
-body{font-family:Poppins, Arial, sans-serif;margin:0;background:var(--pink-1);color:#222}
-.header{background:#ffb6c1;padding:30px;text-align:center}
-.header h1{font-family:'Playfair Display',serif;margin:0;color:#fff}
-.container{max-width:900px;margin:30px auto;background:#fff;padding:22px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
-a{color:var(--accent);font-weight:600}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kézzel készített táskák</title>
+
+  <!-- Külső betűtípusok -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Saját stíluslap -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header"><h1>Rólam</h1></div>
-<div style="text-align:center;margin-top:14px"><a href="index.html">Vissza a főoldalra</a></div>
-<div class="container">
-<h2>Üdvözöllek!</h2>
-<p>Én készítem ezeket a táskákat a saját stúdiómban. Minden darab kézzel varrott, tervezett és ellenőrzött, hogy hosszú éveken át örömet szerezzen. Fontos a részletek szeretete — gombok, bélések, varrások mind külön figyelmet kapnak.</p>
-<p>Ha szeretnél rendelni, használd a kosár és rendelés oldalt, vagy írj nekem a kapcsolati űrlapon.</p>
-</div>
-</body>
-</html>
+  <!-- Felső sáv / logó -->
+  <header class="site-header">
+    <div class="logo">
+      <h1>Kézzel készített táskák</h1>
+      <p>egyedi, szeretettel készített darabok</p>
+    </div>
 
+    <!-- Fő menü -->
+    <nav class="main-nav">
+      <a href="index.html">Főoldal</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rendeles.html">Rendelés</a>
+    </nav>
+  </header>
 
+  <!-- Hero szekció -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Találd meg az új kedvenc táskádat</h2>
+      <p>Minden táska kézzel készül, gondosan válogatott anyagokból, kis szériában.</p>
+      <a class="btn" href="galeria.html">Nézd meg a galériát</a>
+    </div>
+  </section>
 
+  <!-- Termékkártyák helye -->
+  <main class="content">
+    <h2>Legnépszerűbb táskák</h2>
+    <div id="product-list" class="product-grid">
+      <!-- A script.js fogja feltölteni a kártyákat -->
+    </div>
+  </main>
 
-<!-- kapcsolat.html -->
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kapcsolat</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{--pink-1:#fff0f6;--accent:#ff69b4}
-body{font-family:Poppins, Arial, sans-serif;margin:0;background:var(--pink-1);color:#222}
-.header{background:#ff8fab;padding:30px;text-align:center}
-.header h1{font-family:'Playfair Display',serif;margin:0;color:#fff}
-.container{max-width:900px;margin:30px auto;background:#fff;padding:22px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.04)}
-label{display:block;margin-top:10px;font-weight:600}
-input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ffd5e2;margin-top:6px}
-button{margin-top:12px;padding:10px 16px;border-radius:9px;border:none;background:var(--accent);color:#fff;font-weight:700}
-.small{color:#666;margin-top:8px}
-</style>
-</head>
-<body>
-<div class="header"><h1>Kapcsolat</h1></div>
-<div style="text-align:center;margin-top:14px"><a href="index.html">Vissza a főoldalra</a></div>
-<div class="container">
-<p>Írj nekünk egy üzenetet, és hamarosan válaszolunk!</p>
-<form id="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT">
-<label>Név</label>
-<input type="text" name="name" required>
-<label>Email</label>
-<input type="email" name="email" required>
-<label>Üzenet</label>
-<textarea name="message" rows="5" required></textarea>
-<button type="submit">Küldés</button>
-<p class="small">Használhatsz Formspree-t vagy EmailJS-t az email fogadására.</p>
-</form>
-</div>
+  <!-- Lábléc -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Kézzel készített táskák – minden jog fenntartva.</p>
+  </footer>
+
+  <!-- Kosár és termék logika -->
+  <script src="script.js"></script>
 </body>
 </html>
