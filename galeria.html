@@ -1,1 +1,63 @@
-<!-- galeria.html tartalom ide -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galéria – Kézzel készített táskák</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <h1>Galéria</h1>
+      <p>válogatás a kedvenc táskáimból</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Főoldal</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="galeria.html" class="active">Galéria</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rendeles.html">Rendelés</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="text-block">
+      <h2>Kollekció</h2>
+      <p>Itt egy kis ízelítőt látsz a táskáimból. A fotók illusztrációk, később lecserélheted őket saját képekre.</p>
+    </section>
+
+    <div class="product-grid" style="margin-top:22px;">
+      <div class="card">
+        <img src="https://via.placeholder.com/500x350/ffe6f2/cc6699?text=V%C3%A1llt%C3%A1ska" alt="Válltáska">
+        <h3>Válltáska</h3>
+        <p>Mindennapi, kényelmes viselet.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/500x350/ffe6f2/cc6699?text=K%C3%A9zit%C3%A1ska" alt="Kézitáska">
+        <h3>Kézitáska</h3>
+        <p>Elegáns, letisztult forma.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/500x350/ffe6f2/cc6699?text=Shopper" alt="Shopper">
+        <h3>Shopper</h3>
+        <p>Tágas, könnyű, hétvégi programokra.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/500x350/ffe6f2/cc6699?text=H%C3%A1tizs%C3%A1k" alt="Hátizsák">
+        <h3>Hátizsák</h3>
+        <p>Szabad kezek, kényelmes hordás.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
