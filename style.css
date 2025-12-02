@@ -1,1 +1,189 @@
-/* style.css tartalom ide */
+:root {
+  --pink-light: #ffe6f2;
+  --pink: #ff8fb8;
+  --pink-dark: #e0529c;
+  --bg: #fff7fb;
+  --text: #333;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Fejléc + menü */
+
+.site-header {
+  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-dark) 100%);
+  color: #fff;
+  padding: 16px 24px;
+  box-shadow: var(--shadow);
+}
+
+.site-header .logo h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+}
+
+.site-header .logo p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.08);
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  background: #fff;
+  color: var(--pink-dark);
+}
+
+/* Hero */
+
+.hero {
+  padding: 40px 24px 20px;
+  background: radial-gradient(circle at top left, #fff, var(--pink-light));
+}
+
+.hero-text {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  margin: 0 0 16px;
+}
+
+/* Gombok */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--pink);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--pink-dark);
+}
+
+/* Tartalom / kártyák */
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.content h2 {
+  font-family: "Playfair Display", serif;
+  margin-top: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin: 10px 0 4px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* Szöveges blokkok */
+
+.text-block,
+.form-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+/* Kapcsolati űrlap */
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #ffd0e6;
+  margin-top: 6px;
+  font: inherit;
+}
+
+.small-note {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Lábléc */
+
+.site-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 16px;
+  color: #666;
+}
