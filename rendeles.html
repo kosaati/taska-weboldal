@@ -1,1 +1,62 @@
-<!-- rendeles.html tartalom ide -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rendelés – Kézzel készített táskák</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <h1>Rendelés</h1>
+      <p>add meg az adataidat, és felveszem veled a kapcsolatot</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Főoldal</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rendeles.html" class="active">Rendelés</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="form-section">
+      <h2>Rendelési űrlap</h2>
+      <p>Itt tudod leadni a rendelésedet. Írd le röviden, milyen táskát szeretnél (szín, típus, esetleges egyedi kérés).</p>
+
+      <form method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT">
+        <label for="name">Név</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email">Email cím</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="phone">Telefonszám (opcionális)</label>
+        <input id="phone" type="tel" name="phone">
+
+        <label for="order-details">Mit szeretnél rendelni?</label>
+        <textarea id="order-details" name="order-details" rows="5" placeholder="Pl. 1× pasztell válltáska, 1× fekete shopper, plusz hosszabb pánt..." required></textarea>
+
+        <label for="address">Szállítási cím (város, utca, irányítószám)</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <button type="submit" class="btn">Rendelés elküldése</button>
+        <p class="small-note">
+          A rendelés elküldése még nem minősül végleges vásárlásnak – először emailben egyeztetjük a részleteket és az árat.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
