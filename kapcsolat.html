@@ -1,1 +1,55 @@
-<!-- kapcsolat.html tartalom ide -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kapcsolat – Kézzel készített táskák</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <h1>Kapcsolat</h1>
+      <p>kérdésed van vagy rendelni szeretnél?</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Főoldal</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="galeria.html">Galéria</a>
+      <a href="kapcsolat.html" class="active">Kapcsolat</a>
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rendeles.html">Rendelés</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="form-section">
+      <h2>Írj nekem üzenetet</h2>
+      <p>Az alábbi űrlapon tudsz érdeklődni, ajánlatot kérni vagy rendelést egyeztetni.</p>
+
+      <form method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT">
+        <label for="name">Név</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email">Email cím</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="message">Üzenet</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Üzenet küldése</button>
+        <p class="small-note">
+          Az üzenetet egy biztonságos űrlapszolgáltató (Formspree) továbbítja az email címemre.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
