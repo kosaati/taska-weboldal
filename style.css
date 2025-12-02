@@ -35,6 +35,25 @@ body {
   font-family: "Playfair Display", serif;
 }
 
+/* PK táskák animáció a főoldalon */
+.brand-title {
+  letter-spacing: 1px;
+  animation: fadeSlideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 .site-header .logo p {
   margin: 4px 0 0;
   font-size: 0.9rem;
