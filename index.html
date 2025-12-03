@@ -8,18 +8,30 @@
 </head>
 <body>
 
-<header class="site-header hero-header">
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      Ingyenes szállítás 25 000 Ft felett • Kézzel készült, egyedi táskák
+    </div>
+    <div class="topbar-right">
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
-      <a href="index.html">PK táskák</a>
+    <div class="logo-block">
+      <a href="index.html" class="logo">PK táskák</a>
       <span class="logo-tagline">saját készítésű egyedi darabok</span>
     </div>
     <nav class="main-nav">
+      <a href="#kategoria">Kategóriák</a>
       <a href="#termekek">Termékek</a>
-      <a href="#miert">Miért PK?</a>
       <a href="#velemenyek">Vélemények</a>
       <a href="#gyik">GYIK</a>
-      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
     </nav>
   </div>
 
@@ -43,27 +55,42 @@
 
 <main class="content">
 
-  <!-- MIÉRT PK? -->
-  <section id="miert" class="section container features">
-    <h2 class="section-title">Miért válaszd a PK táskákat?</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Egyedi darabok</h3>
-        <p>Kis szériában készülnek, így kicsi az esélye, hogy máson is ugyanazt látod.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Minőségi alapanyagok</h3>
-        <p>Erős, mégis finom tapintású textil és gondos varrás a hosszú élettartamért.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Átgondolt funkcionalitás</h3>
-        <p>Praktikus zsebek, jól záródó rekeszek, kényelmes pántok a minden napokra.</p>
+  <!-- KIEMELT KATEGÓRIÁK -->
+  <section id="kategoria" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Kiemelt kategóriák</h2>
+      <div class="category-grid">
+        <article class="category-card">
+          <div class="category-icon">👩</div>
+          <h3>Női táskák</h3>
+          <p>Elegáns és hétköznapi modellek, amik feldobják a szetted.</p>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">👨</div>
+          <h3>Férfi táskák</h3>
+          <p>Praktikus és letisztult táskák a mindennapokra.</p>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">👜</div>
+          <h3>Kézitáskák</h3>
+          <p>Kisebb, mégis tágas táskák alkalmakra és városhoz.</p>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">🎀</div>
+          <h3>Neszeszerek</h3>
+          <p>Sminkhez, apróságokhoz – hogy minden a helyén legyen.</p>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">🧵</div>
+          <h3>Válltáskák</h3>
+          <p>Kényelmes, vállra akasztható táskák, igazi mindenesek.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- TERMÉKEK / WEBSHOP RÉSZ -->
-  <section id="termekek" class="section section-alt">
+  <!-- TERMÉKEK / WEBSHOP -->
+  <section id="termekek" class="section">
     <div class="container">
       <h2 class="section-title">Válogass az egyedi táskák közül</h2>
 
@@ -105,26 +132,28 @@
   </section>
 
   <!-- VÉLEMÉNYEK -->
-  <section id="velemenyek" class="section container testimonials">
-    <h2 class="section-title">Mit mondanak a vásárlók?</h2>
-    <div class="testimonial-grid">
-      <article class="testimonial-card">
-        <p>„Pont olyan, mint a képeken – sőt élőben még szebb. A varrás hibátlan.”</p>
-        <span>– Anna</span>
-      </article>
-      <article class="testimonial-card">
-        <p>„Végre egy táska, ami elbírja a laptopot is, és még mindig nőies marad.”</p>
-        <span>– Dóri</span>
-      </article>
-      <article class="testimonial-card">
-        <p>„Imádom, hogy nem jön velem szembe az utcán. Látszik rajta, hogy kézzel készült.”</p>
-        <span>– Petra</span>
-      </article>
+  <section id="velemenyek" class="section section-alt">
+    <div class="container testimonials">
+      <h2 class="section-title">Mit mondanak a vásárlók?</h2>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <p>„Pont olyan, mint a képeken – sőt élőben még szebb. A varrás hibátlan.”</p>
+          <span>– Anna</span>
+        </article>
+        <article class="testimonial-card">
+          <p>„Végre egy táska, ami elbírja a laptopot is, és még mindig nőies marad.”</p>
+          <span>– Dóri</span>
+        </article>
+        <article class="testimonial-card">
+          <p>„Imádom, hogy nem jön velem szembe az utcán. Látszik rajta, hogy kézzel készült.”</p>
+          <span>– Petra</span>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- GYIK -->
-  <section id="gyik" class="section section-alt">
+  <section id="gyik" class="section">
     <div class="container faq">
       <h2 class="section-title">Gyakori kérdések</h2>
       <div class="faq-item">
