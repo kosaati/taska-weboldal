@@ -3,67 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rólam – Kézzel készített táskák</title>
+  <title>PK táskák – Kézzel készített női táskák</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      background: #faf7f5;
+      font-family: 'Poppins', sans-serif;
+      color: #4a4a4a;
+    }
+
+    .site-header {
+      background: linear-gradient(to right, #eac8d6, #f8e9ef);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
+      color: #5a4a7d;
+    }
+
+    .logo p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+      color: #6b5a72;
+    }
+
+    .main-nav {
+      margin-top: 20px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #5a4a7d;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .main-nav a:hover {
+      color: #c36fa5;
+    }
+
+    .active {
+      border-bottom: 2px solid #c36fa5;
+      padding-bottom: 4px;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #5a4a7d;
+      margin-bottom: 10px;
+    }
+
+    .text-block p {
+      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: rgba(0,0,0,0.07) 0 6px 18px;
+      padding-bottom: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: rgba(0,0,0,0.14) 0 10px 25px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 14px 0 8px;
+      color: #7a5b89;
+    }
+
+    .card p {
+      padding: 0 15px;
+      color: #5e5e5e;
+      font-size: 0.95rem;
+    }
+
+    .site-footer {
+      margin-top: 50px;
+      padding: 25px;
+      background: #f2e9ee;
+      text-align: center;
+      color: #6b5b7a;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
-  <div class="logo">
-    <h1 class="brand-title">PK táskák</h1>
-        <p>saját készítésű női táskák</p
-  </div>
- <nav class="main-nav">
-  <a href="index.html" class="active">Főoldal</a>
-  <a href="rolam.html">Rólam</a>
-  <a href="galeria.html">Termékek</a>
-  <a href="kapcsolat.html">Kapcsolat</a>
-  <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
-  <a href="rendeles.html">Rendelés</a>
-</nav>
+    <div class="logo">
+      <h1 class="brand-title">PK táskák</h1>
+      <p>saját készítésű női táskák</p>
+    </div>
 
-
+    <nav class="main-nav">
+      <a href="index.html" class="active">Főoldal</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="galeria.html">Termékek</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+      <a href="rendeles.html">Rendelés</a>
+    </nav>
   </header>
 
   <main class="content">
-  <section class="text-block">
-    <h2>Üdvözöllek a műhelyemben</h2>
-    <p>
-      Kézzel készített, nőies táskákat készítek kis szériában. A célom, hogy
-      olyan darabot találj, amit örömmel viselsz a mindennapokban és különleges
-      alkalmakon is.
-    </p>
-    <p>
-      Nézd meg a kedvenc táskáimat, majd kattints a galériára, ha még több
-      inspirációt szeretnél.
-    </p>
-  </section>
+    <section class="text-block">
+      <h2>Üdvözöllek a műhelyemben</h2>
+      <p>Kézzel készített, nőies táskákat készítek kis szériában. A célom, hogy
+         olyan darabot találj, amit örömmel viselsz a mindennapokban és különleges alkalmakon is.</p>
+      <p>Nézd meg a kedvenc táskáimat, majd kattints a galériára, ha még több inspirációt szeretnél.</p>
+    </section>
 
-  <h2 style="margin-top:28px;">Kedvenc táskáim</h2>
+    <h2 style="margin-top: 28px;">Kedvenc táskáim</h2>
     <div id="product-list" class="product-grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+1" alt="Pasztell válltáska">
-      <h3>Pasztell válltáska</h3>
-      <p>Mindennapi használatra, több belső zsebbel.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+2" alt="Elegáns kézitáska">
-      <h3>Elegáns kézitáska</h3>
-      <p>Alkalmakra, letisztult formával és finom részletekkel.</p>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+3" alt="Weekend shopper">
-      <h3>Weekend shopper</h3>
-      <p>Tágas, könnyű, kényelmes viselet városban és utazáshoz.</p>
-    </div>
-  </div>
-</main>
 
+      <div class="card">
+        <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+1" alt="Pasztell válltáska">
+        <h3>Pasztell válltáska</h3>
+        <p>Mindennapi használatra, több belső zsebbel.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+2" alt="Elegáns kézitáska">
+        <h3>Elegáns kézitáska</h3>
+        <p>Alkalmakra, letisztult formával és finom részletekkel.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x280/ffe6f2/cc6699?text=T%C3%A1ska+3" alt="Weekend shopper">
+        <h3>Weekend shopper</h3>
+        <p>Tágas, könnyű, kényelmes viselet városban és utazáshoz.</p>
+      </div>
+
+    </div>
+  </main>
 
   <footer class="site-footer">
     <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
