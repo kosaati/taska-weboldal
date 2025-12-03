@@ -1,208 +1,39 @@
-:root {
-  --pink-light: #ffe6f2;
-  --pink: #ff8fb8;
-  --pink-dark: #e0529c;
-  --bg: #fff7fb;
-  --text: #333;
-  --card-bg: #ffffff;
-  --shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
+/* Base styles for PK táskák - feminine pastel theme */
+.btn.ghost{background:transparent;color:var(--muted);border-color:transparent}
+.hero-image{background-image:linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)), url('https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb');background-size:cover;border-radius:18px;height:320px}
+.section-title{font-family:'Playfair Display',serif;color:#5a3a4f;margin-bottom:14px}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.product-card{background:var(--card-bg);border-radius:var(--radius);padding:14px;box-shadow:0 6px 20px rgba(76,45,67,0.06);transition:transform .25s ease,box-shadow .25s ease}
+.product-card img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.product-card h3{font-family:'Playfair Display',serif;margin:12px 0 6px;color:#6b3d5a}
+.price{color:var(--accent);font-weight:700}
+.product-card button{margin-top:10px}
+.about{display:flex;gap:20px;align-items:center}
+.about-photo{background-image:url('https://images.unsplash.com/photo-1520975698514-8b6a0a8f4b98');background-size:cover;height:220px;border-radius:16px;flex:1}
+.about-text{flex:2}
+.site-footer{background:linear-gradient(180deg,#fff6fb,#ffeef8);padding:18px;text-align:center;margin-top:40px;color:var(--muted)}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: "Poppins", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
+/* Cart and order */
+.cart-container{background:var(--card-bg);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.cart-item{display:flex;gap:12px;align-items:center;padding:12px;border-bottom:1px solid rgba(0,0,0,0.04)}
+.cart-item img{width:80px;height:80px;object-fit:cover;border-radius:10px}
+.cart-summary{margin-top:12px;padding:12px;background:linear-gradient(90deg,#fff,#fff7fb);border-radius:10px}
+.order-form{display:flex;flex-direction:column;gap:12px}
+.form-row{display:flex;gap:12px}
+.form-row label{flex:1;display:flex;flex-direction:column}
+input,select,textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
 
-/* Fejléc + menü */
 
-.site-header {
-  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-dark) 100%);
-  color: #fff;
-  padding: 16px 24px;
-  box-shadow: var(--shadow);
-}
-
-.site-header .logo h1 {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-}
-
-/* PK táskák animáció a főoldalon */
-.brand-title {
-  letter-spacing: 1px;
-  animation: fadeSlideIn 1s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes fadeSlideIn {
-  from {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/* Responsive */
+@media (max-width:900px){
+.header-inner{flex-direction:column;align-items:flex-start}
+.main-nav{margin-top:12px}
+.hero{grid-template-columns:1fr}
+.about{flex-direction:column}
 }
 
 
-.site-header .logo p {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
-}
-
-.main-nav {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.main-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  background: rgba(255,255,255,0.08);
-}
-
-.main-nav a.active,
-.main-nav a:hover {
-  background: #fff;
-  color: var(--pink-dark);
-}
-
-/* Hero */
-
-.hero {
-  padding: 40px 24px 20px;
-  background: radial-gradient(circle at top left, #fff, var(--pink-light));
-}
-
-.hero-text {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-text h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.hero-text p {
-  margin: 0 0 16px;
-}
-
-/* Gombok */
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: none;
-  background: var(--pink);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: var(--pink-dark);
-}
-
-/* Tartalom / kártyák */
-
-.content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-.content h2 {
-  font-family: "Playfair Display", serif;
-  margin-top: 0;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 18px;
-  margin-top: 16px;
-}
-
-.card {
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 14px;
-  text-align: center;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-.card h3 {
-  margin: 10px 0 4px;
-  font-size: 1.05rem;
-}
-
-.card p {
-  margin: 0;
-}
-
-/* Szöveges blokkok */
-
-.text-block,
-.form-section {
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  padding: 20px;
-}
-
-/* Kapcsolati űrlap */
-
-form label {
-  display: block;
-  margin-top: 12px;
-  font-weight: 600;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 9px 10px;
-  border-radius: 10px;
-  border: 1px solid #ffd0e6;
-  margin-top: 6px;
-  font: inherit;
-}
-
-.small-note {
-  font-size: 0.85rem;
-  color: #777;
-  margin-top: 8px;
-}
-
-/* Lábléc */
-
-.site-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 16px;
-  color: #666;
-}
+/* small animations */
+.product-card{will-change:transform}
+.product-card:hover{transform:translateY(-6px)}
