@@ -1,58 +1,22 @@
-<html lang="hu">
-</div>
-</header>
-
-
-<main class="content container">
-<h2 class="section-title">Termékek</h2>
-
-
-<div class="filters">
-<label>Szín:
-<select id="filter-color">
-<option value="all">Összes</option>
-<option value="pink">Rózsaszín</option>
-<option value="lavender">Levendula</option>
-<option value="black">Fekete</option>
-</select>
-</label>
-
-
+<!DOCTYPE html> <html lang="hu"> <head> <meta charset="UTF-8"> <title>PK táskák – Webshop</title> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="style.css"> </head> <body> <header class="site-header"> <div class="container header-inner"> <div class="logo"> <a href="index.html">PK táskák</a> </div> <nav class="main-nav"> <a href="index.html">Termékek</a> <a href="galeria.html">Galéria</a> <a href="rolam.html">Rólam</a> <a href="kapcsolat.html">Kapcsolat</a> <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a> </nav> </div> </header> <main class="content container"> <h2 class="section-title">Termékek</h2> <div class="filters"> <label>Szín: <select id="filter-color"> <option value="all">Összes</option> <option value="Rózsaszín">Rózsaszín</option> <option value="Levendula">Levendula</option> <option value="Fekete">Fekete</option> <option value="Bézs">Bézs</option> <option value="Szürke">Szürke</option> </select> </label>
+text
 <label>Stílus:
-<select id="filter-style">
-<option value="all">Összes</option>
-<option value="elegant">Elegáns</option>
-<option value="casual">Mindennapi</option>
-<option value="vintage">Vintage</option>
-</select>
+  <select id="filter-style">
+    <option value="all">Összes</option>
+    <option value="Elegáns">Elegáns</option>
+    <option value="Mindennapi">Mindennapi</option>
+    <option value="Vintage">Vintage</option>
+  </select>
 </label>
-
 
 <label>Ár:
-<select id="filter-price">
-<option value="all">Összes</option>
-<option value="0-10000">0 - 10 000 Ft</option>
-<option value="10000-15000">10 000 - 15 000 Ft</option>
-<option value="15000">15 000+ Ft</option>
-</select>
+  <select id="filter-price">
+    <option value="all">Összes</option>
+    <option value="low">0 - 10 000 Ft</option>
+    <option value="mid">10 000 - 15 000 Ft</option>
+    <option value="high">15 000+ Ft</option>
+  </select>
 </label>
 
-
 <input id="search-input" placeholder="Keresés..." />
-</div>
-
-
-<div id="product-grid" class="product-grid"></div>
-</main>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>© 2025 PK táskák – Minden jog fenntartva.</p>
-</div>
-</footer>
-
-
-<script src="script.js"></script>
-</body>
-</html>
+</div> <div id="product-grid" class="product-grid"></div> </main> <footer class="site-footer"> <div class="container"> <p>© 2025 PK táskák – Minden jog fenntartva.</p> </div> </footer> <script src="script.js" defer></script> </body> </html>
