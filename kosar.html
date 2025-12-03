@@ -1,59 +1,45 @@
-<!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kosár – Kézzel készített táskák</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kosár – PK Táskák</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">
-      <h1>Kosár</h1>
-      <p>itt látod, mit tettél a kosárba</p>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html">Főoldal</a>
-      <a href="rolam.html">Rólam</a>
-      <a href="galeria.html">Termékek</a>
-      <a href="kapcsolat.html">Kapcsolat</a>
-      <a href="kosar.html" class="active">Kosár (<span id="cart-count">0</span>)</a>
-      <a href="rendeles.html">Rendelés</a>
-    </nav>
-  </header>
+<header class="site-header">
+<div class="container header-inner">
+<div class="logo">
+<h1 class="brand-title">PK táskák</h1>
+<p class="tag">kézzel készített női táskák</p>
+</div>
+<nav class="main-nav">
+<a href="index.html">Főoldal</a>
+<a href="rolam.html">Rólam</a>
+<a href="galeria.html">Termékek</a>
+<a href="kapcsolat.html">Kapcsolat</a>
+<a href="kosar.html" class="active">Kosár (<span id="cart-count">0</span>)</a>
+</nav>
+</div>
+</header>
 
-  <main class="content">
-    <section class="text-block">
-      <h2>Kosár tartalma</h2>
 
-      <div class="cart-wrapper">
-        <table class="cart-table">
-          <thead>
-            <tr>
-              <th>Termék</th>
-              <th>Mennyiség</th>
-              <th>Egységár</th>
-              <th>Részösszeg</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="cart-table-body">
-            <!-- script.js tölti fel -->
-          </tbody>
-        </table>
+<main class="content container">
+<h2 class="section-title">Kosár</h2>
+<div id="cart-container" class="cart-container"></div>
+<div id="cart-summary" class="cart-summary"></div>
+<div style="text-align:right; margin-top:16px;"><a href="rendeles.html" class="btn primary">Tovább a rendeléshez</a></div>
+</main>
 
-        <p id="cart-summary" style="margin-top:12px;font-weight:600;"></p>
-        <p style="margin-top:6px;">A rendelést a <a href="rendeles.html">Rendelés</a> oldalon tudod véglegesíteni.</p>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
-  </footer>
+<footer class="site-footer">
+<div class="container">
+<p>© 2025 PK táskák – Minden jog fenntartva.</p>
+</div>
+</footer>
 
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
+
