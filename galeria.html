@@ -1,66 +1,52 @@
-<!DOCTYPE html>
 <html lang="hu">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Termékek – Kézzel készített táskák</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termék – PK Táskák</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">
-      <h1>Termékek</h1>
-      <p>válogass a kézzel készített táskáim közül</p>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html">Főoldal</a>
-      <a href="rolam.html">Rólam</a>
-      <a href="galeria.html" class="active">Termékek</a>
-      <a href="kapcsolat.html">Kapcsolat</a>
-      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
-      <a href="rendeles.html">Rendelés</a>
-    </nav>
-  </header>
+<header class="site-header">
+<div class="container header-inner">
+<div class="logo">
+<h1 class="brand-title">PK táskák</h1>
+<p class="tag">kézzel készített női táskák</p>
+</div>
+<nav class="main-nav">
+<a href="index.html">Főoldal</a>
+<a href="rolam.html">Rólam</a>
+<a href="galeria.html">Termékek</a>
+<a href="kapcsolat.html">Kapcsolat</a>
+<a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+</nav>
+</div>
+</header>
 
-  <main class="content">
-    <section class="text-block">
-      <h2>Elérhető táskák</h2>
-      <p>Az alábbi táskákat most tudod megrendelni. Kattints a „Kosárba” gombra, majd a kosár oldalon ellenőrizd a rendelésedet.</p>
-    </section>
 
-    <div class="product-grid" style="margin-top:22px;">
-      <div class="card">
-        <img src="imgfekete-hatizsak.jpg" alt="Pasztell válltáska">
-        <h3>Pasztell válltáska</h3>
-        <p style="font-weight:600;margin-top:4px;">25 900 Ft</p>
-        <p>Mindennapi használatra, több belső zsebbel.</p>
-        <button class="btn" data-add="t1" style="margin-top:10px;">Kosárba</button>
-      </div>
+<main class="content container product-page">
+<div class="product-detail">
+<div class="images">
+<img id="product-main-image" src="https://via.placeholder.com/600x450" alt="Termék kép">
+</div>
+<div class="details">
+<h2 id="product-title">Termék címe</h2>
+<p id="product-desc">Részletes leírás</p>
+<div class="price" id="product-price">12 990 Ft</div>
+<label>Darabszám
+<input id="quantity" type="number" value="1" min="1" style="width:80px; margin-left:8px;">
+</label>
+<button id="add-to-cart">Kosárba</button>
+</div>
+</div>
+</main>
 
-      <div class="card">
-        <img src="imgkezitaska.jpg" alt="Elegáns kézitáska">
-        <h3>Elegáns kézitáska</h3>
-        <p style="font-weight:600;margin-top:4px;">31 900 Ft</p>
-        <p>Alkalmakra, letisztult formával és finom részletekkel.</p>
-        <button class="btn" data-add="t2" style="margin-top:10px;">Kosárba</button>
-      </div>
 
-      <div class="card">
-        <img src="imglila-imglila-kerek-tasksa.jpg" alt="Weekend shopper">
-        <h3>Weekend shopper</h3>
-        <p style="font-weight:600;margin-top:4px;">28 900 Ft</p>
-        <p>Tágas, könnyű, kényelmes viselet városban és utazáshoz.</p>
-        <button class="btn" data-add="t3" style="margin-top:10px;">Kosárba</button>
-      </div>
-    </div>
-  </main>
+<footer class="site-footer">
+<div class="container">
+<p>© 2025 PK táskák – Minden jog fenntartva.</p>
+</div>
+</footer>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
-  </footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
