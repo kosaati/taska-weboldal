@@ -1,66 +1,92 @@
-// Simple client-side shop logic: products, filters, cart, order
-<button data-id="${p.id}">Kosárba</button>
-`;
-grid.appendChild(card);
-});}
+// PK Táskák - Teljes webshop logika
+const PRODUCTS = [
+  {id:1,title:"Rózsaszín válltáska",price:12900,img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",color:"Rózsaszín",style:"Elegáns"},
+  {id:2,title:"Levendula kézitáska",price:14900,img:"https://images.unsplash.com/photo-1581236001062-4e16f8e79923?w=400",color:"Levendula",style:"Mindennapi"},
+  {id:3,title:"Fekete shopper táska",price:17900,img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",color:"Fekete",style:"Vintage"},
+  {id:4,title:"Bézs crossbody",price:11900,img:"https://images.unsplash.com/photo-1581236001062-4e16f8e79923?w=400",color:"Bézs",style:"Elegáns"},
+  {id:5,title:"Rózsaszín clutch",price:9900,img:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400",color:"Rózsaszín",style:"Mindennapi"},
+  {id:6,title:"Szürke tote bag",price:15900,img:"https://images.unsplash.com/photo-1581236001062-4e16f8e79923?w=400",color:"Szürke",style:"Vintage"}
+];
 
+let cart = JSON.parse(localStorage.getItem('pk_cart')) || [];
 
-// Add to cart
-function addToCart(id, qty=1){
-const prod = PRODUCTS.find(p=>p.id===Number(id)); if(!prod) return;
-const existing = cart.find(i=>i.id===prod.id);
-if(existing){ existing.qty += qty; } else { cart.push({id:prod.id,title:prod.title,price:prod.price,qty:qty,img:prod.img}); }
-saveCart(); renderCart();}
-
-
-// Render cart page
-function renderCart(){const container=document.getElementById('cart-container'); const summary=document.getElementById('cart-summary'); if(!container||!summary) return;
-container.innerHTML=''; if(cart.length===0){container.innerHTML='<p>Kosarad üres.</p>'; summary.innerHTML=''; return;}
-cart.forEach(item=>{
-const el=document.createElement('div'); el.className='cart-item';
-el.innerHTML = `<img src="${item.img}" alt="${item.title}"><div style="flex:1"><strong>${item.title}</strong><div>${item.qty} x ${item.price.toLocaleString()} Ft</div></div><div style="text-align:right"><button data-remove="${item.id}">Törlés</button></div>`;
-container.appendChild(el);
-});
-const total = cart.reduce((s,i)=>s + i.qty*i.price,0);
-summary.innerHTML = `<div class="cart-summary"><strong>Összesen: ${total.toLocaleString()} Ft</strong></div>`;
+// Cart count frissítése (headerben)
+function updateCartCount(){
+  const countEl = document.getElementById('cart-count');
+  if(countEl) countEl.textContent = cart.reduce((sum,item)=>sum+item.qty,0);
 }
 
-
-// Remove from cart
-function removeFromCart(id){cart = cart.filter(i=>i.id!==Number(id)); saveCart(); renderCart();}
-
-
-// Order form handling
-function populateOrderSummary(){const el=document.getElementById('order-summary'); if(!el) return; if(cart.length===0) {el.innerHTML='<p>Kosár üres</p>'; return;} const total = cart.reduce((s,i)=>s + i.qty*i.price,0); el.innerHTML = `<strong>Rendelés összegzés</strong><div>${cart.map(i=>`${i.qty}× ${i.title}`).join('<br>')}</div><div style="margin-top:8px">Összesen: <strong>${total.toLocaleString()} Ft</strong></div>`; }
-
-
-function submitOrder(e){
-e.preventDefault();
-const name=document.getElementById('name').value; const email=document.getElementById('email').value; const address=document.getElementById('address').value; const phone=document.getElementById('phone').value;
-if(!name||!email||!address||!phone){alert('Kérlek töltsd ki az összes kötelező mezőt.');return;}
-// In real project: send to server. Here we simulate success.
-const order = {id:Date.now(),name,email,address,phone,cart, total:cart.reduce((s,i)=>s+i.qty*i.price,0)};
-console.log('Order placed:',order);
-localStorage.removeItem('pk_cart'); cart=[]; saveCart(); alert('Köszönjük a rendelést! Ezt a demó rendszer csak szimulálja.'); window.location.href='index.html';
+// Főoldali termék render
+function renderHomeProducts(){
+  const grid = document.getElementById('product-grid') || document.querySelector('.product-grid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  PRODUCTS.slice(0,4).forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.title}">
+      <h3>${p.title}</h3>
+      <div class="price">${p.price.toLocaleString()} Ft</div>
+      <button data-id="${p.id}">Kosárba</button>
+    `;
+    grid.appendChild(card);
+  });
 }
 
-
-// Init and event listeners
-function init(){
-updateCartCount(); renderHomeProducts(); renderProductGrid(); renderCart(); populateOrderSummary();
-// Global button events (add to cart)
-document.body.addEventListener('click',e=>{
-if(e.target.matches('button[data-id]')){ addToCart(e.target.dataset.id,1); }
-if(e.target.matches('button[data-remove]')){ removeFromCart(e.target.dataset.remove); }
-});
-// Filters
-const fcolor=document.getElementById('filter-color'); const fstyle=document.getElementById('filter-style'); const fprice=document.getElementById('filter-price'); const search=document.getElementById('search-input');
-[fcolor,fstyle,fprice,search].forEach(el=>{ if(el) el.addEventListener('input',renderProductGrid); });
-// Order form
-const orderForm=document.getElementById('order-form'); if(orderForm) { populateOrderSummary(); orderForm.addEventListener('submit',submitOrder); }
-// Contact form demo
-const contactForm=document.getElementById('contact-form'); if(contactForm){ contactForm.addEventListener('submit',e=>{ e.preventDefault(); alert('Köszönjük az üzenetet! Hamarosan válaszolunk.'); contactForm.reset(); }); }
+// Szűrős termék grid
+function renderProductGrid(){
+  const grid = document.getElementById('product-grid') || document.querySelector('.product-grid');
+  if(!grid) return;
+  
+  const fcolor = document.getElementById('filter-color')?.value || 'all';
+  const fstyle = document.getElementById('filter-style')?.value || 'all';
+  const fprice = document.getElementById('filter-price')?.value || 'all';
+  const search = document.getElementById('search-input')?.value.toLowerCase() || '';
+  
+  const filtered = PRODUCTS.filter(p => 
+    (fcolor === 'all' || p.color === fcolor) &&
+    (fstyle === 'all' || p.style === fstyle) &&
+    (fprice === 'all' || 
+     (fprice === 'low' && p.price < 10000) ||
+     (fprice === 'mid' && p.price >= 10000 && p.price <= 15000) ||
+     (fprice === 'high' && p.price > 15000)) &&
+    (search === '' || p.title.toLowerCase().includes(search))
+  );
+  
+  grid.innerHTML = '';
+  filtered.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.title}">
+      <h3>${p.title}</h3>
+      <div class="price">${p.price.toLocaleString()} Ft</div>
+      <button data-id="${p.id}">Kosárba</button>
+    `;
+    grid.appendChild(card);
+  });
 }
 
+// Kosár mentés
+function saveCart(){ localStorage.setItem('pk_cart', JSON.stringify(cart)); }
 
-window.addEventListener('DOMContentLoaded',init);
+// Kosár render
+function renderCart(){
+  const container = document.getElementById('cart-container');
+  const summary = document.getElementById('cart-summary');
+  if(!container || !summary) return;
+  
+  container.innerHTML = '';
+  if(cart.length === 0){
+    container.innerHTML = '<p style="text-align:center;padding:40px;color:var(--muted);">Kosarad üres. <a href="index.html">Vásárolj most!</a></p>';
+    summary.innerHTML = '';
+    return;
+  }
+  
+  cart.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'cart-item';
+    el.innerHTML = `
+      <img src="${item.img}" alt="${item.title}">
+      <div style="
