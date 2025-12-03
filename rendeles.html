@@ -1,62 +1,80 @@
-<!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rendelés – Kézzel készített táskák</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rendelés – PK Táskák</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">
-      <h1>Rendelés</h1>
-      <p>add meg az adataidat, és felveszem veled a kapcsolatot</p>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html">Főoldal</a>
-      <a href="rolam.html">Rólam</a>
-      <a href="galeria.html">Termékek</a>
-      <a href="kapcsolat.html">Kapcsolat</a>
-      <a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
-      <a href="rendeles.html" class="active">Rendelés</a>
-    </nav>
-  </header>
+<header class="site-header">
+<div class="container header-inner">
+<div class="logo">
+<h1 class="brand-title">PK táskák</h1>
+<p class="tag">kézzel készített női táskák</p>
+</div>
+<nav class="main-nav">
+<a href="index.html">Főoldal</a>
+<a href="rolam.html">Rólam</a>
+<a href="galeria.html">Termékek</a>
+<a href="kapcsolat.html">Kapcsolat</a>
+<a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
+</nav>
+</div>
+</header>
 
-  <main class="content">
-    <section class="form-section">
-      <h2>Rendelési űrlap</h2>
-      <p>Itt tudod leadni a rendelésedet. Írd le röviden, milyen táskát szeretnél (szín, típus, esetleges egyedi kérés).</p>
 
-      <form method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT">
-        <label for="name">Név</label>
-        <input id="name" type="text" name="name" required>
+<main class="content container">
+<h2 class="section-title">Rendelés</h2>
 
-        <label for="email">Email cím</label>
-        <input id="email" type="email" name="email" required>
 
-        <label for="phone">Telefonszám (opcionális)</label>
-        <input id="phone" type="tel" name="phone">
+<form id="order-form" class="order-form">
+<div class="form-row">
+<label>Teljes név
+<input type="text" id="name" required>
+</label>
+<label>Email
+<input type="email" id="email" required>
+</label>
+</div>
 
-        <label for="order-details">Mit szeretnél rendelni?</label>
-        <textarea id="order-details" name="order-details" rows="5" placeholder="Pl. 1× pasztell válltáska, 1× fekete shopper, plusz hosszabb pánt..." required></textarea>
 
-        <label for="address">Szállítási cím (város, utca, irányítószám)</label>
-        <textarea id="address" name="address" rows="3" required></textarea>
+<div class="form-row">
+<label>Szállítási cím
+<input type="text" id="address" required>
+</label>
+<label>Telefonszám
+<input type="tel" id="phone" required>
+</label>
+</div>
 
-        <button type="submit" class="btn">Rendelés elküldése</button>
-        <p class="small-note">
-          A rendelés elküldése még nem minősül végleges vásárlásnak – először emailben egyeztetjük a részleteket és az árat.
-        </p>
-      </form>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Kézzel készített női táskák – minden jog fenntartva.</p>
-  </footer>
+<div class="form-row">
+<label>Megjegyzés
+<textarea id="note" rows="4"></textarea>
+</label>
+</div>
 
-  <script src="script.js"></script>
+
+<div class="form-row">
+<div id="order-summary" style="flex:1;"></div>
+</div>
+
+
+<div style="text-align:right; margin-top:12px;"><button type="submit" class="btn primary">Rendelés elküldése</button></div>
+</form>
+
+
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>© 2025 PK táskák – Minden jog fenntartva.</p>
+</div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
