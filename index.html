@@ -1,58 +1,70 @@
+<!DOCTYPE html>
 <html lang="hu">
-</div>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PK – Saját Készítésű Táskák | Modern, Minimalista Webáruház</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo">
+            <a href="index.html">PK</a>
+            <p>Saját Készítésű Táskák</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Főoldal</a></li>
+                <li><a href="újdonságok.html">Újdonságok</a></li>
+                <li><a href="termékek.html">Táskák</a></li>
+                <li><a href="rólunk.html">Rólam</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </header>
 
-<main class="content container">
-<h2 class="section-title">Termékek</h2>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stílus, ami a kezeid között született</h1>
+            <p>Fedezd fel a kézműves minőségű, minimalista PK táska kollekciót.</p>
+            <a href="újdonságok.html" class="cta-button">Fedezd fel az Újdonságokat!</a>
+        </div>
+        </section>
 
+    <section class="kategoriak">
+        <h2>Keresd meg a hozzád illő darabot</h2>
+        <div class="kategoria-grid">
+            <a href="termékek.html#noi" class="kategoria-kartya">
+                <img src="https://via.placeholder.com/300x400/F0B9C9/FFFFFF?text=Női+Táskák" alt="Női Táskák">
+                <h3>Női Táskák</h3>
+            </a>
+            <a href="termékek.html#ferfi" class="kategoria-kartya">
+                <img src="https://via.placeholder.com/300x400/E5E5E5/333333?text=Férfi+Táskák" alt="Férfi Táskák">
+                <h3>Férfi Táskák</h3>
+            </a>
+            <a href="termékek.html#nesz" class="kategoria-kartya">
+                <img src="https://via.placeholder.com/300x400/D0D8D0/333333?text=Neszesszerek" alt="Neszesszerek">
+                <h3>Neszesszerek</h3>
+            </a>
+        </div>
+    </section>
 
-<div class="filters">
-<label>Szín:
-<select id="filter-color">
-<option value="all">Összes</option>
-<option value="pink">Rózsaszín</option>
-<option value="lavender">Levendula</option>
-<option value="black">Fekete</option>
-</select>
-</label>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
 
-
-<label>Stílus:
-<select id="filter-style">
-<option value="all">Összes</option>
-<option value="elegant">Elegáns</option>
-<option value="casual">Mindennapi</option>
-<option value="vintage">Vintage</option>
-</select>
-</label>
-
-
-<label>Ár:
-<select id="filter-price">
-<option value="all">Összes</option>
-<option value="0-10000">0 - 10 000 Ft</option>
-<option value="10000-15000">10 000 - 15 000 Ft</option>
-<option value="15000">15 000+ Ft</option>
-</select>
-</label>
-
-
-<input id="search-input" placeholder="Keresés..." />
-</div>
-
-
-<div id="product-grid" class="product-grid"></div>
-</main>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>© 2025 PK táskák – Minden jog fenntartva.</p>
-</div>
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
