@@ -193,3 +193,123 @@ footer {
     margin-left: 15px;
     font-size: 1.2em;
 }
+/* TERMÉK KATALÓGUS STÍLUSOK */
+.termek-katalogus {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.katalogus-elrendezes {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* 1. SZŰRŐ OLDALSÁV */
+.szuro-oldsav {
+    flex: 0 0 250px; /* Fix szélességű oldalsáv */
+    padding: 20px;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+    height: fit-content; /* Csak a tartalom magasságát foglalja el */
+}
+
+.szuro-oldsav h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.szuro-nav ul {
+    list-style: none;
+}
+
+.szuro-nav li {
+    margin: 8px 0;
+}
+
+.szuro-nav a {
+    display: block;
+    padding: 5px;
+}
+
+.szuro-nav a.active {
+    font-weight: 700;
+    color: var(--pink-highlight);
+}
+
+.szuro-oldsav hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.egyeb-szuro-form label, 
+.egyeb-szuro-form select,
+.egyeb-szuro-form input[type="range"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.egyeb-szuro-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 2. TERMÉK KÁRTYÁK */
+.termek-kartyak-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.termek-kartya {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.termek-kartya:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.termek-kartya img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.termek-kartya h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.termek-kartya .ar {
+    font-weight: 700;
+    color: var(--pink-highlight);
+    margin-bottom: 10px;
+}
+
+.hozzaadas-gomb {
+    display: block;
+    background-color: var(--pink-highlight);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.hozzaadas-gomb:hover {
+    background-color: var(--pink-darker);
+    color: var(--white); /* Felülírja az alap hover stílust */
+}
