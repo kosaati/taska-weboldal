@@ -374,6 +374,140 @@ footer {
     border: 1px solid var(--light-grey);
     border-radius: 5px;
 }
+/* ========================================================================= */
+/* KOSÁR OLDAL STÍLUSOK (CART.HTML) */
+/* ========================================================================= */
+
+.kosar-oldal h1 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+.kosar-elrendezes {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.kosar-elemek {
+    flex: 2; /* Szélesebb a kosár elemeknek */
+}
+
+.kosar-osszegzes {
+    flex: 1; /* Keskenyebb az összegzésnek */
+    background-color: var(--light-grey);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/* KOSÁR ELEM */
+.kosar-termek {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.kosar-termek:last-child {
+    border-bottom: none;
+}
+
+.kosar-kep {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.termek-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.termek-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.termek-info .szin {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.mennyiseg-valaszto input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.termek-ar {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--pink-highlight);
+    width: 100px;
+    text-align: right;
+}
+
+.eltavolitas-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.eltavolitas-btn:hover {
+    color: var(--pink-darker);
+}
+
+/* ÖSSZEGZÉS STÍLUSAI */
+.kosar-osszegzes h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.osszegzes-sor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.osszegzes-sor.vegosszeg {
+    padding-top: 15px;
+    border-top: 2px solid var(--pink-highlight);
+    margin-top: 20px;
+}
+
+.osszegzes-sor.vegosszeg h3 {
+    font-size: 1.5em;
+    color: var(--pink-highlight);
+    margin: 0;
+}
+
+.kosar-osszegzes .cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.vissza-link {
+    text-align: center;
+    margin-top: 15px;
+}
 
 .gyik-container {
     flex: 1;
