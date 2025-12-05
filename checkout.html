@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pénztár – Fizetési és Szállítási Adatok</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pénztár – Fizetési és Szállítási Adatok</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="index.html">PK</a>
-            <p>Saját Készítésű Táskák</p>
+  <header>
+    <div class="logo">
+      <a href="index.html">PK</a>
+      <p>Saját Készítésű Táskák</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="ujdonsagok.html">Újdonságok</a></li>
+        <li><a href="termekek.html">Táskák</a></li>
+        <li><a href="rolam.html">Rólam</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-section">
+      <div class="container">
+
+        <h1>Pénztár</h1>
+        <p class="breadcrumbs"><a href="kosar.html">Kosár</a> > <strong>Pénztár</strong></p>
+
+        <div class="checkout-elrendezes">
+
+          <!-- BAL OLDAL: ADATOK ÉS SZÁLLÍTÁS -->
+          <section class="adatok-szallitas">
+            <h2>Szállítási és Kapcsolattartási Adatok</h2>
+
+            <form action="#" method="POST" class="checkout-form">
+              <div class="form-group">
+                <label for="nev">Teljes név:</label>
+                <input type="text" id="nev" name="nev" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail cím:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefon">Telefonszám:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+              </div>
+
+              <h3>Szállítási cím</h3>
+              <div class="form-group">
+                <label for="iranyitoszam">Irányítószám:</label>
+                <input type="text" id="iranyitoszam" name="iranyitoszam" required>
+              </div>
+              <div class="form-group">
+                <label for="varos">Város:</label>
+                <input type="text" id="varos" name="varos" required>
+              </div>
+              <div class="form-group">
+                <label for="utca">Utca, házszám:</label>
+                <input type="text" id="utca" name="utca" required>
+              </div>
+              <div class="form-group">
+                <label for="megjegyzes">Megjegyzés a futárnak (opcionális):</label>
+                <textarea id="megjegyzes" name="megjegyzes" rows="3"></textarea>
+              </div>
+
+              <h3>Fizetési mód</h3>
+              <div class="fizetes-valaszto">
+                <div class="radio-group">
+                  <input type="radio" id="kartya" name="fizetes" value="kartya" checked>
+                  <label for="kartya"><i class="fas fa-credit-card"></i> Bankkártyás fizetés (Előre)</label>
+                </div>
+                <div class="radio-group">
+                  <input type="radio" id="utanvet" name="fizetes" value="utanvet">
+                  <label for="utanvet"><i class="fas fa-money-bill-wave"></i> Utánvét (+500 Ft)</label>
+                </div>
+              </div>
+
+              <p class="vissza-kosar">
+                <a href="kosar.html"><i class="fas fa-chevron-left"></i> Vissza a kosárhoz</a>
+              </p>
+            </form>
+          </section>
+
+          <!-- JOBB OLDAL: RENDELÉS ÖSSZEGZÉS -->
+          <aside class="rendeles-osszegzes">
+            <h2>Rendelés Összesítése</h2>
+
+            <div class="osszegzes-termek-lista">
+              <div class="osszegzes-termek">
+                <img src="https://via.placeholder.com/60x60/F0B9C9/FFFFFF?text=Táska+1" alt="Pasztell Válltáska">
+                <div class="info">
+                  <p>Pasztell Válltáska (1 db)</p>
+                  <p class="ar">24 990 Ft</p>
+                </div>
+              </div>
+              <div class="osszegzes-termek">
+                <img src="https://via.placeholder.com/60x60/6A8EAE/FFFFFF?text=Táska+2" alt="Modern Aktatáska">
+                <div class="info">
+                  <p>Modern Aktatáska (1 db)</p>
+                  <p class="ar">34 990 Ft</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="osszegzes-sor">
+              <span>Termékek összesen:</span>
+              <span>59 980 Ft</span>
+            </div>
+            <div class="osszegzes-sor">
+              <span>Szállítás:</span>
+              <span>1 490 Ft</span>
+            </div>
+            <div class="osszegzes-sor vegosszeg">
+              <strong>Végösszeg:</strong>
+              <strong>61 470 Ft</strong>
+            </div>
+
+            <button type="submit" form="checkout-form" class="cta-button">
+              Rendelés véglegesítése
+            </button>
+          </aside>
+
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li><a href="ujdonsagok.html">Újdonságok</a></li> 
-                <li><a href="termekek.html">Táskák</a></li> 
-                <li><a href="rolam.html">Rólam</a></li> 
-                <li><a href="kapcsolat.html">Kapcsolat</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon">
-            <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </header>
-    
-    <main   <section class="page-section">
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-            
-            <h1>Pénztár</h1>
-            <p class="breadcrumbs"><a href="kosar.html">Kosár</a> > **Pénztár**</p>
-            
-            <div class="checkout-elrendezes">
-                
-                <section class="adatok-szallitas">
-                    <h2>Szállítási és Kapcsolattartási Adatok</h2>
-                    
-                    <form action="#" method="POST" class="checkout-form">
-                        
-                        <div class="form-group">
-                            <label for="nev">Teljes név:</label>
-                            <input type="text" id="nev" name="nev" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail cím:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefon">Telefonszám:</label>
-                            <input type="tel" id="telefon" name="telefon" required>
-                        </div>
+      <div class="footer-content">
+        <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-                        <h3>Szállítási cím</h3>
-                        <div class="form-group">
-                            <label for="iranyitoszam">Irányítószám:</label>
-                            <input type="text" id="iranyitoszam" name="iranyitoszam" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="varos">Város:</label>
-                            <input type="text" id="varos" name="varos" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="utca">Utca, házszám:</label>
-                            <input type="text" id="utca" name="utca" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="megjegyzes">Megjegyzés a futárnak (opcionális):</label>
-                            <textarea id="megjegyzes" name="megjegyzes" rows="3"></textarea>
-                        </div>
-
-                        <h3>Fizetési mód</h3>
-                        <div class="fizetes-valaszto">
-                            <div class="radio-group">
-                                <input type="radio" id="kartya" name="fizetes" value="kartya" checked>
-                                <label for="kartya"><i class="fas fa-credit-card"></i> Bankkártyás fizetés (Előre)</label>
-                            </div>
-                            <div class="radio-group">
-                                <input type="radio" id="utanvet" name="fizetes" value="utanvet">
-                                <label for="utanvet"><i class="fas fa-money-bill-wave"></i> Utánvét (+500 Ft)</label>
-                            </div>
-                        </div>
-
-                        <p class="vissza-kosar"><a href="kosar.html"><i class="fas fa-chevron-left"></i> Vissza a kosárhoz</a></p>
-                    
-                </section>
-                
-                <aside class="rendeles-osszegzes">
-                    <h2>Rendelés Összesítése</h2>
-                    
-                    <div class="osszegzes-termek-lista">
-                        <div class="osszegzes-termek">
-                            <img src="https://via.placeholder.com/60x60/F0B9C9/FFFFFF?text=Táska+1" alt="Pasztell Válltáska">
-                            <div class="info">
-                                <p>Pasztell Válltáska (1 db)</p>
-                                <p class="ar">24 990 Ft</p>
-                            </div>
-                        </div>
-                         <div class="osszegzes-termek">
-                            <img src="
+  <script src="script.js"></script>
+</body>
+</html>
