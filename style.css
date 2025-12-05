@@ -138,9 +138,19 @@ nav ul li a.active:after {
 /* HÁTTÉRKÉP A FŐOLDALRA (INDEX.HTML) */
 /* ========================================================================= */
 
-.hero-section {
-    /* Cseréld le a 'hatterkep.jpg' nevet a feltöltött fájl pontos nevére! */
-    background-image: url('hatterkep.jpg'); 
+    .hero-section {
+    /* FEL KELL LÉPNI a CSS mappából a gyökérbe, hogy lásd a képet! */
+    background-image: url('../hatterkep.jpg'); 
+    
+    /* Ez garantálja a magasságot, hogy a kép látszódjon: */
+    min-height: 50vh; 
+    padding: 80px 20px; 
+    
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
+    /* ... többi kód, amit kaptál */
+}
     
     /* Beállítjuk, hogy a kép fedje le a teljes szekciót, torzítás nélkül */
     background-size: cover; 
