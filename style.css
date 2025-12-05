@@ -23,7 +23,7 @@ body {
   color: var(--black);
   line-height: 1.6;
 
-  background: url('varras_minta.png') center/cover no-repeat fixed;
+  background: url('varras_minta.png.png') center/cover no-repeat fixed;
   position: relative;
 }
 body::before {
