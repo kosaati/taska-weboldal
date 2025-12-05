@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Újdonságok – Legújabb PK Táskák</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">PK</a>
+            <p>Saját Készítésű Táskák</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="újdonságok.html" class="active">Újdonságok</a></li>
+                <li><a href="termékek.html">Táskák</a></li>
+                <li><a href="rólunk.html">Rólam</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </header>
+    
+    <main class="termek-katalogus">
+        <h1>Újdonságok – A Legfrissebb Kollekció</h1>
+        
+        <p class="intro-text">Fedezd fel a PK legújabb darabjait! Minden táska kézzel készült, a legújabb trendeknek megfelelő minimalista és nőies designnal.</p>
+
+        <div class="katalogus-elrendezes">
+            <aside class="szuro-oldsav">
+                <h3>Szűrés Típus Szerint</h3>
+                <nav class="szuro-nav">
+                    <li><a href="#" class="szuro-link active" data-filter="all">Minden Újdonság</a></li>
+                    <li><a href="#" class="szuro-link" data-filter="noi">Női Táskák</a></li>
+                    <li><a href="#" class="szuro-link" data-filter="ferfi">Férfi Táskák</a></li>
+                    <li><a href="#" class="szuro-link" data-filter="vall">Válltáskák</a></li>
+                    <li><a href="#" class="szuro-link" data-filter="kezi">Kézitáskák</a></li>
+                    <li><a href="#" class="szuro-link" data-filter="nesz">Neszesszerek</a></li>
+                </nav>
+                
+                <hr>
+                
+                <h3>Készítési Dátum</h3>
+                <p>Csak a legutóbbi 3 hónap termékei</p>
+                
+            </aside>
+
+            <section class="termek-kartyak-grid">
+                
+                <div class="termek-kartya" data-kategoria="noi vall">
+                    <img src="https://via.placeholder.com/300/F0B9C9/FFFFFF?text=ÚJ+Rózsaszín+Válltáska" alt="Új Rózsaszín Elegáns Válltáska">
+                    <h3>Új Pasztell Válltáska</h3>
+                    <p class="ar">25 990 Ft</p>
+                    <a href="#" class="hozzaadas-gomb">Kosárba</a>
+                </div>
+                
+                <div class="termek-kartya" data-kategoria="ferfi kezi">
+                    <img src="https://via.placeholder.com/300/6A8EAE/FFFFFF?text=ÚJ+Férfi+Táska" alt="Új Sötétkék Férfi Táska">
+                    <h3>Modern Aktatáska</h3>
+                    <p class="ar">34 990 Ft</p>
+                    <a href="#" class="hozzaadas-gomb">Kosárba</a>
+                </div>
+
+                </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
