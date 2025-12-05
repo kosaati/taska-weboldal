@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pénztár – PK Saját Készítésű Táskák</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">PK</a>
+            <p>Saját Készítésű Táskák</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="ujdonsagok.html">Újdonságok</a></li>
+                <li><a href="termekek.html">Táskák</a></li>
+                <li><a href="rolam.html">Rólam</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-page penztar-oldal">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="kosar.html">Kosár</a> / Pénztár
+                </div>
+                <h1>Pénztár</h1>
+
+                <div class="checkout-elrendezes">
+                    <section class="adatok-szallitas">
+                        
+                        <h2>Számlázási és Szállítási Adatok</h2>
+                        
+                        <form class="checkout-form">
+                            <div class="form-group">
+                                <label for="nev">Teljes név*</label>
+                                <input type="text" id="nev" name="nev" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefon">Telefonszám*</label>
+                                <input type="tel" id="telefon" name="telefon" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="utca">Utca, házszám, emelet/ajtó*</label>
+                                <input type="text" id="utca" name="utca" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="varos">Város*</label>
+                                <input type="text" id="varos" name="varos" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="iranyitoszam">Irányítószám*</label>
+                                <input type="text" id="iranyitoszam" name="iranyitoszam" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail cím*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="megjegyzes">Megjegyzés a rendeléshez (opcionális)</label>
+                                <textarea id="megjegyzes" name="megjegyzes" rows="3"></textarea>
+                            </div>
+                        </form>
+
+                        <h3>Szállítási Mód</h3>
+                        <div class="fizetes-valaszto">
+                            <label class="radio-group">
+                                <input type="radio" name="szallitas" value="futarszolgalat" checked>
+                                <i class="fas fa-truck"></i> Futárszolgálat (2500 Ft)
+                            </label>
+                            <label class="radio-group">
+                                <input type="radio" name="szallitas" value="szemelyes">
+                                <i class="fas fa-handshake"></i> Személyes átvétel (Ingyenes)
+                            </label>
+                        </div>
+                        
+                        <h3>Fizetési Mód</h3>
+                        <div class="fizetes-valaszto">
+                            <label class="radio-group">
+                                <input type="radio" name="fizetes" value="bankkartyas" checked>
+                                <i class="fas fa-credit-card"></i> Bankkártyás fizetés (azonnali)
+                            </label>
+                            <label class="radio-group">
+                                <input type="radio" name="fizetes" value="utalassal">
+                                <i class="fas fa-university"></i> Banki átutalás (előre)
+                            </label>
+                            <label class="radio-group">
+                                <input type="radio" name="fizetes" value="utanvet">
+                                <i class="fas fa-money-bill-wave"></i> Utánvét (300 Ft díj)
+                            </label>
+                        </div>
+                        
+                        <a href="kosar.html" class="vissza-kosar"><i class="fas fa-arrow-left"></i> Vissza a kosárhoz</a>
+                    </section>
+
+                    <aside class="rendeles-osszegzes">
+                        <h2>Rendelésed</h2>
+                        
+                        <div class="osszegzes-termek-lista">
+                            <div class="osszegzes-termek">
+                                <img src="https://via.placeholder.com/60x60/F0B9C9/FFFFFF?text=T1" alt="Pasztell Válltáska" class="termek-thumb">
+                                <div class="info">
+                                    <p>Pasztell Elegáns Válltáska x 1</p>
+                                    <p class="ar">24 990 Ft</p>
+                                </div>
+                            </div>
+                            <div class="osszegzes-termek">
+                                <img src="https://via.placeholder.com/60x60/D0D8D0/333333?text=T2" alt="Elegáns Neszesszer" class="termek-thumb">
+                                <div class="info">
+                                    <p>Elegáns Neszesszer x 3</p>
+                                    <p class="ar">32 990 Ft</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="osszegzes-sor">
+                            <p>Részösszeg:</p>
+                            <p>57 980 Ft</p>
+                        </div>
+                        <div class="osszegzes-sor">
+                            <p>Szállítás (Futárszolgálat):</p>
+                            <p>2 500 Ft</p>
+                        </div>
+                        <div class="osszegzes-sor vegosszeg">
+                            <h3>Fizetendő Végösszeg:</h3>
+                            <h3>60 480 Ft</h3>
+                        </div>
+
+                        <a href="#" class="cta-button">Rendelés Elküldése</a>
+                        
+                        <p class="adatvedelmi">A megrendelés elküldésével elfogadom az Általános Szerződési Feltételeket és az Adatvédelmi nyilatkozatot.</p>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
