@@ -133,28 +133,65 @@ nav ul li a.active:after {
 /* FŐOLDAL STÍLUSOK (INDEX.HTML) */
 /* ========================================================================= */
 
-/* HERO SZEKCIÓ */
 .hero {
-    background: url('https://via.placeholder.com/1600x600/F8F8F8/333333?text=Nagy+Hero+Kép') center/cover no-repeat;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: 40px;
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('varras_minta.png.jpg') center/cover no-repeat;
+  filter: blur(1px);
+  transform: scale(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 185, 201, 0.70);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px 50px;
-    border-radius: 5px;
+  max-width: 540px;
+}
+
+.hero-kicker {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: var(--pink-highlight);
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
 }
+
+.hero-sub {
+  font-size: 1rem;
+  max-width: 420px;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 
 /* KIEMELT KATEGÓRIÁK */
 .kategoriak {
@@ -897,4 +934,160 @@ footer {
 .vissza-link {
     text-align: center;
     margin-top: 15px;
+}
+.site-header {
+  border-bottom: 1px solid var(--light-grey);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--pink-highlight);
+  display: block;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.main-nav a {
+  margin: 0 10px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--pink-highlight);
+}
+
+.cart-link {
+  font-size: 1.4rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #F0B9C9, #E0A0B0);
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(224,160,176,0.5);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.9);
+  color: var(--black);
+  border: 1px solid rgba(255,255,255,0.8);
+}
+.section {
+  padding: 60px 0 70px;
+  background: #FDF7F9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  color: inherit;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+}
+
+.category-image {
+  height: 140px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-noi {
+  background-image: url('https://images.pexels.com/photos/1192602/pexels-photo-1192602.jpeg');
+}
+
+.category-ferfi {
+  background-image: url('https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg');
+}
+
+.category-neszeszer {
+  background-image: url('https://images.pexels.com/photos/3224659/pexels-photo-3224659.jpeg');
+}
+
+.category-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.category-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* mobil */
+@media (max-width: 800px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-inner {
+    padding: 60px 0;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
 }
