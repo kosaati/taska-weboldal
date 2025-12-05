@@ -1,111 +1,113 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kosár – PK Saját Készítésű Táskák</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kosár – PK Saját Készítésű Táskák</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="index.html">PK</a>
-            <p>Saját Készítésű Táskák</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li><a href="ujdonsagok.html">Újdonságok</a></li>
-                <li><a href="termekek.html">Táskák</a></li>
-                <li><a href="rolam.html">Rólam</a></li>
-                <li><a href="kapcsolat.html">Kapcsolat</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon">
-            <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </header>
+  <header>
+    <div class="logo">
+      <a href="index.html">PK</a>
+      <p>Saját Készítésű Táskák</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="ujdonsagok.html">Újdonságok</a></li>
+        <li><a href="termekek.html">Táskák</a></li>
+        <li><a href="rolam.html">Rólam</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
 
-    <main>
-        <div class="content-page kosar-oldal">
-            <div class="container">
-                <h1>Kosaram</h1>
+  <main>
+    <section class="page-section">
+      <div class="container">
+
+        <h1>Kosaram</h1>
+
+        <div class="kosar-elrendezes">
+          <section class="kosar-elemek">
+
+            <div class="kosar-termek">
+              <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Táska1" alt="Pasztell Válltáska" class="kosar-kep">
+              <div class="termek-info">
+                <h3>Pasztell Elegáns Válltáska</h3>
+                <p class="szin">Szín: Rózsaszín</p>
+              </div>
+              <div class="mennyiseg-valaszto">
+                <label for="qty1">Mennyiség:</label>
+                <input type="number" id="qty1" value="1" min="1" max="10">
+              </div>
+              <p class="termek-ar">24 990 Ft</p>
+              <button class="eltavolitas-btn" aria-label="Eltávolítás"><i class="fas fa-times"></i></button>
             </div>
 
-            <div class="container kosar-elrendezes">
-                <section class="kosar-elemek">
-                    
-                    <div class="kosar-termek">
-                        <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Táska1" alt="Pasztell Válltáska" class="kosar-kep">
-                        <div class="termek-info">
-                            <h3>Pasztell Elegáns Válltáska</h3>
-                            <p class="szin">Szín: Rózsaszín</p>
-                        </div>
-                        <div class="mennyiseg-valaszto">
-                            <label for="qty1">Mennyiség:</label>
-                            <input type="number" id="qty1" value="1" min="1" max="10">
-                        </div>
-                        <p class="termek-ar">24 990 Ft</p>
-                        <button class="eltavolitas-btn" aria-label="Eltávolítás"><i class="fas fa-times"></i></button>
-                    </div>
-
-                    <div class="kosar-termek">
-                        <img src="https://via.placeholder.com/100x100/D0D8D0/333333?text=Neszesszer" alt="Elegáns Neszesszer" class="kosar-kep">
-                        <div class="termek-info">
-                            <h3>Elegáns Neszesszer</h3>
-                            <p class="szin">Szín: Szürke</p>
-                        </div>
-                        <div class="mennyiseg-valaszto">
-                            <label for="qty2">Mennyiség:</label>
-                            <input type="number" id="qty2" value="3" min="1" max="10">
-                        </div>
-                        <p class="termek-ar">32 990 Ft</p>
-                        <button class="eltavolitas-btn" aria-label="Eltávolítás"><i class="fas fa-times"></i></button>
-                    </div>
-                    
-                </section>
-                
-                <aside class="kosar-osszegzes">
-                    <h2>Rendelés Összesítése</h2>
-                    
-                    <div class="osszegzes-sor">
-                        <p>Részösszeg (4 termék):</p>
-                        <p>57 980 Ft</p>
-                    </div>
-                    
-                    <div class="osszegzes-sor">
-                        <p>Szállítás:</p>
-                        <p>2 500 Ft</p>
-                    </div>
-                    
-                    <div class="osszegzes-sor vegosszeg">
-                        <h3>Végösszeg:</h3>
-                        <h3>60 480 Ft</h3>
-                    </div>
-                    
-                    <a href="penztar.html" class="cta-button">Tovább a Pénztárhoz</a>
-                    
-                    <p class="vissza-link"><a href="termekek.html">Vásárlás folytatása</a></p>
-                </aside>
+            <div class="kosar-termek">
+              <img src="https://via.placeholder.com/100x100/D0D8D0/333333?text=Neszesszer" alt="Elegáns Neszesszer" class="kosar-kep">
+              <div class="termek-info">
+                <h3>Elegáns Neszesszer</h3>
+                <p class="szin">Szín: Szürke</p>
+              </div>
+              <div class="mennyiseg-valaszto">
+                <label for="qty2">Mennyiség:</label>
+                <input type="number" id="qty2" value="3" min="1" max="10">
+              </div>
+              <p class="termek-ar">32 990 Ft</p>
+              <button class="eltavolitas-btn" aria-label="Eltávolítás"><i class="fas fa-times"></i></button>
             </div>
-        </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
+          </section>
+
+          <aside class="kosar-osszegzes">
+            <h2>Rendelés Összesítése</h2>
+
+            <div class="osszegzes-sor">
+              <p>Részösszeg (4 termék):</p>
+              <p>57 980 Ft</p>
             </div>
+
+            <div class="osszegzes-sor">
+              <p>Szállítás:</p>
+              <p>2 500 Ft</p>
+            </div>
+
+            <div class="osszegzes-sor vegosszeg">
+              <h3>Végösszeg:</h3>
+              <h3>60 480 Ft</h3>
+            </div>
+
+            <a href="penztar.html" class="cta-button">Tovább a Pénztárhoz</a>
+
+            <p class="vissza-link"><a href="termekek.html">Vásárlás folytatása</a></p>
+          </aside>
         </div>
-    </footer>
-    
-    <script src="script.js"></script>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
