@@ -6,7 +6,7 @@
     <title>Pasztell Elegáns Válltáska – PK</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 
@@ -15,85 +15,95 @@
             <a href="index.html">PK</a>
             <p>Saját Készítésű Táskák</p>
         </div>
-       <nav>
-    <ul>
-        <li><a href="index.html" >Főoldal</a></li>
-        <li><a href="ujdonsagok.html">Újdonságok</a></li> 
-        <li><a href="termekek.html">Táskák</a></li> 
-        <li><a href="rolam.html">Rólam</a></li> 
-        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="ujdonsagok.html">Újdonságok</a></li>
+                <li><a href="termekek.html">Táskák</a></li>
+                <li><a href="rolam.html">Rólam</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
         <div class="cart-icon">
-            <a href="#" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+            <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
         </div>
     </header>
-    
-    <main class="product-page">
-        <div class="container product-grid">
-            
-            <section class="product-gallery">
-                <div class="main-image">
-                    <img src="https://via.placeholder.com/600x600/F0B9C9/FFFFFF?text=Fő+termékfotó" alt="Pasztell Elegáns Válltáska">
-                </div>
-                <div class="thumbnail-images">
-                    <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Részlet+1" alt="Részlet 1">
-                    <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Részlet+2" alt="Részlet 2">
-                    <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Bélés" alt="Bélés">
-                </div>
-            </section>
 
-            <section class="product-details">
-                <p class="breadcrumbs"><a href="termékek.html">Táskák</a> / Válltáska</p>
-                
-                <h1>Pasztell Elegáns Válltáska</h1>
-                <p class="ar">48 990 Ft</p>
-                
-                <div class="variaciok">
-                    <label for="szin">Választható színek:</label>
-                    <div class="szin-opciok">
-                        <span class="szin-valaszto active" style="background-color: #F0B9C9;" title="Babarózsaszín"></span>
-                        <span class="szin-valaszto" style="background-color: #D0D8D0;" title="Pasztell Mentazöld"></span>
-                        <span class="szin-valaszto" style="background-color: #FFFFFF; border: 1px solid #ccc;" title="Fehér"></span>
-                    </div>
-                </div>
-
-                <div class="kosar-interakcio">
-                    <label for="mennyiseg">Mennyiség:</label>
-                    <input type="number" id="mennyiseg" value="1" min="1" max="5">
-                    <button class="cta-button add-to-cart-btn">Kosárba teszem</button>
+    <main>
+        <div class="content-page">
+            <div class="container termek-oldal-elrendezes">
+                <div class="breadcrumbs">
+                    <a href="index.html">Főoldal</a> / <a href="termekek.html">Táskák</a> / Pasztell Válltáska
                 </div>
                 
-                <hr>
-
-                <div class="termek-leiras">
-                    <h2>Részletes Leírás</h2>
-                    <p>Ez a kézzel készített elegáns válltáska a minimalista design és a nőies pasztell árnyalatok tökéletes ötvözete. Ideális választás irodába vagy hétköznapi viseletre. Minden darab Pálóczi Katalin garanciájával készül.</p>
+                <section class="termek-fo-info kapcsolat-grid">
                     
-                    <h3>Jellemzők:</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Anyag: Prémium minőségű vegán bőr</li>
-                        <li><i class="fas fa-check-circle"></i> Méret: 30 cm x 25 cm x 10 cm (Szélesség x Magasság x Mélység)</li>
-                        <li><i class="fas fa-check-circle"></i> Belső: Két zseb, cipzáras rekesz</li>
-                        <li><i class="fas fa-check-circle"></i> Ápolási útmutató: Tisztítás nedves ruhával.</li>
-                    </ul>
-                    <a href="rólunk.html" class="link-to-process">Tudj meg többet a kézműves folyamatról...</a>
-                </div>
+                    <div class="termek-galeria">
+                        <img src="https://via.placeholder.com/600x600/F0B9C9/FFFFFF?text=Fő+Kép" alt="Pasztell Elegáns Válltáska" class="fokep">
+                        <div class="indexkepek">
+                            <img src="https://via.placeholder.com/100x100/F0B9C9/FFFFFF?text=Kép1" alt="Válltáska nézet 1" class="indexkep active">
+                            <img src="https://via.placeholder.com/100x100/E0A0B0/FFFFFF?text=Kép2" alt="Válltáska nézet 2" class="indexkep">
+                            <img src="https://via.placeholder.com/100x100/D0D8D0/333333?text=Kép3" alt="Válltáska nézet 3" class="indexkep">
+                        </div>
+                    </div>
 
-            </section>
+                    <div class="vasarlasi-info">
+                        <h1>Pasztell Elegáns Válltáska</h1>
+                        <p class="cikkszam">Cikkszám: PK-0042</p>
+                        <p class="ar">24 990 Ft</p>
+
+                        <div class="opciok">
+                            <label for="szin">Szín:</label>
+                            <select id="szin">
+                                <option>Pasztell Rózsaszín (Készleten)</option>
+                                <option>Halvány Szürke (Rendelésre)</option>
+                            </select>
+                            
+                            <label for="mennyiseg">Mennyiség:</label>
+                            <input type="number" id="mennyiseg" value="1" min="1" max="10">
+                        </div>
+                        
+                        <a href="kosar.html" class="cta-button">Kosárba teszem</a>
+                        
+                        <div class="szallitas-info">
+                            <p><i class="fas fa-truck"></i> **Gyors szállítás:** 2-4 munkanap</p>
+                            <p><i class="fas fa-undo"></i> **30 napos pénzvisszafizetési garancia**</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="reszletes-szekcio">
+                    <div class="termek-leiras">
+                        <h2>Részletes Leírás</h2>
+                        <p>Ez a kézzel készített elegáns válltáska a minimalista design és a nőies pasztell árnyalatok tökéletes ötvözete. Ideális választás irodába vagy hétköznapi viseletre. Minden darab Pálóczi Katalin garanciájával készül.</p>
+                        
+                        <h3>Jellemzők:</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Anyag: Prémium minőségű vegán bőr</li>
+                            <li><i class="fas fa-check-circle"></i> Méret: 30 cm x 25 cm x 10 cm (Szélesség x Magasság x Mélység)</li>
+                            <li><i class="fas fa-check-circle"></i> Belső: Két zseb, cipzáras rekesz</li>
+                            <li><i class="fas fa-check-circle"></i> Ápolási útmutató: Tisztítás nedves ruhával.</li>
+                        </ul>
+                        <a href="rolam.html" class="link-to-process">Tudj meg többet a kézműves folyamatról...</a>
+                    </div>
+
+                </section>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
-            <div class="social-icons">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
             </div>
         </div>
     </footer>
     
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
