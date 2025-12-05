@@ -1,66 +1,101 @@
-// Simple client-side shop logic: products, filters, cart, order
-<button data-id="${p.id}">Kosárba</button>
-`;
-grid.appendChild(card);
-});}
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. NAVIGÁCIÓ AKTÍV LINK KEZELÉSE (Global)
+    // Ezt azért kell, mert a linket statikusan adtuk meg, de a JS dinamikusan tudja kezelni
+    function setActiveNav() {
+        // Lekérjük az aktuális URL fájl nevét (pl. index.html, rolunk.html)
+        const currentPath = window.location.pathname;
+        const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
+        
+        // Lekérjük az összes navigációs linket
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        navLinks.forEach(link => {
+            // Megkeressük, hogy a link href attribútuma megegyezik-e az aktuális fájlnévvel
+            if (link.getAttribute('href') === currentFile) {
+                // Töröljük a class-t minden linkről
+                navLinks.forEach(l => l.classList.remove('active'));
+                // Hozzáadjuk a class-t az aktív linkhez
+                link.classList.add('active');
+            }
+        });
+    }
+
+    setActiveNav();
 
 
-// Add to cart
-function addToCart(id, qty=1){
-const prod = PRODUCTS.find(p=>p.id===Number(id)); if(!prod) return;
-const existing = cart.find(i=>i.id===prod.id);
-if(existing){ existing.qty += qty; } else { cart.push({id:prod.id,title:prod.title,price:prod.price,qty:qty,img:prod.img}); }
-saveCart(); renderCart();}
+    // 2. TERMÉKSZŰRŐ LOGIKA (termekek.html / ujsagok.html)
+    const filterLinks = document.querySelectorAll('.szuro-link');
+    const productCards = document.querySelectorAll('.termek-kartya');
+
+    if (filterLinks.length > 0 && productCards.length > 0) {
+        
+        filterLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Kiemeljük az aktív szűrőt
+                filterLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Lekérjük a szűrő kategóriát
+                const filterValue = link.getAttribute('data-filter');
+
+                // Végigmegyünk az összes termékkártyán
+                productCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-kategoria');
+                    
+                    // Ellenőrizzük, hogy a kártya megfelel-e a szűrőnek
+                    if (filterValue === 'all' || cardCategories.includes(filterValue)) {
+                        card.style.display = 'block'; // Megjelenítés
+                    } else {
+                        card.style.display = 'none';  // Elrejtés
+                    }
+                });
+            });
+        });
+    }
 
 
-// Render cart page
-function renderCart(){const container=document.getElementById('cart-container'); const summary=document.getElementById('cart-summary'); if(!container||!summary) return;
-container.innerHTML=''; if(cart.length===0){container.innerHTML='<p>Kosarad üres.</p>'; summary.innerHTML=''; return;}
-cart.forEach(item=>{
-const el=document.createElement('div'); el.className='cart-item';
-el.innerHTML = `<img src="${item.img}" alt="${item.title}"><div style="flex:1"><strong>${item.title}</strong><div>${item.qty} x ${item.price.toLocaleString()} Ft</div></div><div style="text-align:right"><button data-remove="${item.id}">Törlés</button></div>`;
-container.appendChild(el);
+    // 3. TERMÉKOLDAL GALÉRIA KEZELÉSE (product-page.html)
+    const thumbnails = document.querySelectorAll('.thumbnail-images img');
+    const mainImage = document.querySelector('.main-image img');
+
+    if (thumbnails.length > 0 && mainImage) {
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                
+                // Beállítjuk a fő kép forrását az indexkép forrására
+                mainImage.src = thumb.src;
+                mainImage.alt = thumb.alt;
+
+                // Frissítjük az aktív állapotot az indexképeken
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+        
+        // Kezdeti állapot beállítása: az első indexkép legyen aktív
+        if(thumbnails[0]) {
+            thumbnails[0].classList.add('active');
+        }
+    }
+
+    // 4. KOSÁR MENNYISÉG SZINKRONIZÁLÁSA (cart.html)
+    const quantityInputs = document.querySelectorAll('.kosar-termek input[type="number"]');
+    
+    // Bár a tényleges kosárlogika backendet igényel, ez a kód biztosítja, 
+    // hogy a változtatások megtörténjenek és a termékek ne tűnjenek el.
+    quantityInputs.forEach(input => {
+        input.addEventListener('change', () => {
+            if (input.value < 1) {
+                // Megakadályozza, hogy 0 vagy negatív mennyiség legyen
+                input.value = 1; 
+            }
+            // Itt kellene frissíteni a végösszeget egy valós webáruházban,
+            // de itt csak a vizuális változás történik meg.
+            console.log(`Termék mennyiség változott: ${input.id}, új mennyiség: ${input.value}`);
+        });
+    });
+    
 });
-const total = cart.reduce((s,i)=>s + i.qty*i.price,0);
-summary.innerHTML = `<div class="cart-summary"><strong>Összesen: ${total.toLocaleString()} Ft</strong></div>`;
-}
-
-
-// Remove from cart
-function removeFromCart(id){cart = cart.filter(i=>i.id!==Number(id)); saveCart(); renderCart();}
-
-
-// Order form handling
-function populateOrderSummary(){const el=document.getElementById('order-summary'); if(!el) return; if(cart.length===0) {el.innerHTML='<p>Kosár üres</p>'; return;} const total = cart.reduce((s,i)=>s + i.qty*i.price,0); el.innerHTML = `<strong>Rendelés összegzés</strong><div>${cart.map(i=>`${i.qty}× ${i.title}`).join('<br>')}</div><div style="margin-top:8px">Összesen: <strong>${total.toLocaleString()} Ft</strong></div>`; }
-
-
-function submitOrder(e){
-e.preventDefault();
-const name=document.getElementById('name').value; const email=document.getElementById('email').value; const address=document.getElementById('address').value; const phone=document.getElementById('phone').value;
-if(!name||!email||!address||!phone){alert('Kérlek töltsd ki az összes kötelező mezőt.');return;}
-// In real project: send to server. Here we simulate success.
-const order = {id:Date.now(),name,email,address,phone,cart, total:cart.reduce((s,i)=>s+i.qty*i.price,0)};
-console.log('Order placed:',order);
-localStorage.removeItem('pk_cart'); cart=[]; saveCart(); alert('Köszönjük a rendelést! Ezt a demó rendszer csak szimulálja.'); window.location.href='index.html';
-}
-
-
-// Init and event listeners
-function init(){
-updateCartCount(); renderHomeProducts(); renderProductGrid(); renderCart(); populateOrderSummary();
-// Global button events (add to cart)
-document.body.addEventListener('click',e=>{
-if(e.target.matches('button[data-id]')){ addToCart(e.target.dataset.id,1); }
-if(e.target.matches('button[data-remove]')){ removeFromCart(e.target.dataset.remove); }
-});
-// Filters
-const fcolor=document.getElementById('filter-color'); const fstyle=document.getElementById('filter-style'); const fprice=document.getElementById('filter-price'); const search=document.getElementById('search-input');
-[fcolor,fstyle,fprice,search].forEach(el=>{ if(el) el.addEventListener('input',renderProductGrid); });
-// Order form
-const orderForm=document.getElementById('order-form'); if(orderForm) { populateOrderSummary(); orderForm.addEventListener('submit',submitOrder); }
-// Contact form demo
-const contactForm=document.getElementById('contact-form'); if(contactForm){ contactForm.addEventListener('submit',e=>{ e.preventDefault(); alert('Köszönjük az üzenetet! Hamarosan válaszolunk.'); contactForm.reset(); }); }
-}
-
-
-window.addEventListener('DOMContentLoaded',init);
