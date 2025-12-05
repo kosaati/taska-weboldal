@@ -526,3 +526,145 @@ footer {
 .anyag-info .cta-button {
     margin-top: 20px;
 }
+/* TERMÉK RÉSZLETES OLDAL (Product Page) STÍLUSOK */
+.product-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.product-gallery {
+    flex: 1; /* Bal oldal */
+}
+
+.product-details {
+    flex: 1; /* Jobb oldal */
+}
+
+/* KÉP GALÉRIA */
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, border 0.3s;
+}
+
+.thumbnail-images img:hover {
+    opacity: 1;
+    border: 2px solid var(--pink-highlight);
+}
+
+/* INFORMÁCIÓS RÉSZ */
+.breadcrumbs {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-details h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.product-details .ar {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--pink-highlight);
+    margin-bottom: 25px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--light-grey);
+    margin: 30px 0;
+}
+
+/* VARIÁCIÓK */
+.variaciok label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.szin-opciok {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.szin-valaszto {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px transparent;
+    transition: box-shadow 0.3s;
+}
+
+.szin-valaszto.active, .szin-valaszto:hover {
+    box-shadow: 0 0 0 2px var(--pink-highlight);
+}
+
+/* KOSÁR INTERAKCIÓ */
+.kosar-interakcio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.kosar-interakcio input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    flex: 1; /* A gomb kitölti a rendelkezésre álló helyet */
+    padding: 15px 30px;
+}
+
+/* LEÍRÁS */
+.termek-leiras h2, .termek-leiras h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.termek-leiras ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.termek-leiras ul li {
+    margin-bottom: 8px;
+}
+
+.termek-leiras .fa-check-circle {
+    color: var(--pink-highlight);
+    margin-right: 8px;
+}
