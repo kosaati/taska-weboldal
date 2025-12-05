@@ -1032,8 +1032,9 @@ footer {
 }
 .section {
   padding: 60px 0 70px;
-  background: #FDF7F9;
+  background: rgba(255, 255, 255, 0.4);
 }
+
 
 .section-title {
   text-align: center;
