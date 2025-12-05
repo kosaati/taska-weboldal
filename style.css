@@ -513,3 +513,194 @@ footer {
     flex: 1;
     padding: 30px;
     background-color: var(--light-grey);
+    /* ========================================================================= */
+/* PÉNZTÁR OLDAL STÍLUSOK (CHECKOUT.HTML) */
+/* ========================================================================= */
+
+.penztar-oldal .container {
+    padding: 60px 20px;
+}
+
+.penztar-oldal h1 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.breadcrumbs a {
+    color: var(--pink-highlight);
+}
+
+.checkout-elrendezes {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.adatok-szallitas {
+    flex: 3; /* Szélesebb a formoknak */
+}
+
+.rendeles-osszegzes {
+    flex: 2; /* Keskenyebb az összegzésnek */
+    background-color: var(--light-grey);
+    padding: 30px;
+    border-radius: 5px;
+    position: sticky; /* Rögzítés a görgetésnél */
+    top: 20px;
+}
+
+.adatok-szallitas h2, .adatok-szallitas h3 {
+    font-family: var(--font-heading);
+    color: var(--pink-highlight);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.adatok-szallitas h2 {
+    margin-top: 0;
+}
+
+/* ŰRLAP STÍLUSOK */
+.checkout-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Széles elemek (pl. utca, megjegyzés) teljes szélességen */
+.form-group:nth-of-type(3), 
+.form-group:nth-of-type(6),
+.form-group:nth-of-type(7) { 
+    grid-column: 1 / -1; 
+}
+
+.checkout-form label {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.checkout-form input:not([type="radio"]), 
+.checkout-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: var(--font-body);
+}
+
+.checkout-form input:focus, 
+.checkout-form textarea:focus {
+    border-color: var(--pink-highlight);
+    outline: none;
+}
+
+/* FIZETÉS VÁLASZTÓ */
+.fizetes-valaszto {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--pink-highlight);
+}
+
+.radio-group i {
+    margin-right: 8px;
+    color: var(--pink-highlight);
+}
+
+.vissza-kosar {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.vissza-kosar i {
+    margin-right: 5px;
+}
+
+/* RENDELÉS ÖSSZEGZÉS STÍLUSAI */
+.rendeles-osszegzes h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.osszegzes-termek-lista {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.osszegzes-termek {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.osszegzes-termek img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.osszegzes-termek .info {
+    flex-grow: 1;
+}
+
+.osszegzes-termek .info p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.osszegzes-termek .info .ar {
+    font-weight: 700;
+    color: var(--pink-highlight);
+}
+
+.rendeles-osszegzes .osszegzes-sor {
+    margin-bottom: 10px;
+}
+
+.rendeles-osszegzes .cta-button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.adatvedelmi {
+    text-align: center;
+    font-size: 0.8em;
+    color: #888;
+}
