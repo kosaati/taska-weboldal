@@ -1,7 +1,10 @@
-/* ALAP BEÁLLÍTÁSOK */
+/* ========================================================================= */
+/* PK WEBSHOP STYLE SHEET: ALAP ÉS GLOBÁLIS STÍLUSOK (I., II.) */
+/* ========================================================================= */
+
 :root {
     --white: #FFFFFF;
-    --light-grey: #F8F8F8; /* Szekciók elválasztására */
+    --light-grey: #F8F8F8; /* Szekciók elválasztására, háttérnek */
     --black: #333333;
     --pink-highlight: #F0B9C9; /* Babarózsaszín kiemelés */
     --pink-darker: #E0A0B0; /* Gomb hover állapota */
@@ -103,6 +106,33 @@ nav ul li a.active:after {
     font-size: 1.5em;
 }
 
+/* CTA GOMB (GLOBAL) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--pink-highlight);
+    color: var(--white);
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: var(--pink-darker);
+    color: var(--white);
+}
+
+
+/* ========================================================================= */
+/* FŐOLDAL STÍLUSOK (INDEX.HTML) */
+/* ========================================================================= */
+
 /* HERO SZEKCIÓ */
 .hero {
     background: url('https://via.placeholder.com/1600x600/F8F8F8/333333?text=Nagy+Hero+Kép') center/cover no-repeat;
@@ -126,23 +156,6 @@ nav ul li a.active:after {
     color: var(--pink-highlight);
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: var(--pink-highlight);
-    color: var(--white);
-    padding: 12px 30px;
-    margin-top: 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: var(--pink-darker);
-}
-
 /* KIEMELT KATEGÓRIÁK */
 .kategoriak {
     text-align: center;
@@ -160,6 +173,11 @@ nav ul li a.active:after {
     flex: 1;
     max-width: 300px;
     text-align: center;
+    transition: opacity 0.3s;
+}
+
+.kategoria-kartya:hover {
+    opacity: 0.9;
 }
 
 .kategoria-kartya img {
@@ -174,7 +192,9 @@ nav ul li a.active:after {
     transform: scale(1.03);
 }
 
+/* ========================================================================= */
 /* LÁBLÉC (FOOTER) */
+/* ========================================================================= */
 footer {
     background-color: var(--light-grey);
     color: var(--black);
@@ -193,7 +213,11 @@ footer {
     margin-left: 15px;
     font-size: 1.2em;
 }
-/* TERMÉK KATALÓGUS STÍLUSOK */
+
+/* ========================================================================= */
+/* TERMÉK KATALÓGUS / ÚJDONSÁGOK OLDAL STÍLUSOK (TERMEKEK.HTML) */
+/* ========================================================================= */
+
 .termek-katalogus {
     max-width: 1400px;
     margin: 40px auto;
@@ -208,11 +232,11 @@ footer {
 
 /* 1. SZŰRŐ OLDALSÁV */
 .szuro-oldsav {
-    flex: 0 0 250px; /* Fix szélességű oldalsáv */
+    flex: 0 0 250px; 
     padding: 20px;
     background-color: var(--light-grey);
     border-radius: 5px;
-    height: fit-content; /* Csak a tartalom magasságát foglalja el */
+    height: fit-content; 
 }
 
 .szuro-oldsav h3 {
@@ -311,9 +335,13 @@ footer {
 
 .hozzaadas-gomb:hover {
     background-color: var(--pink-darker);
-    color: var(--white); /* Felülírja az alap hover stílust */
+    color: var(--white); 
 }
-/* ÁLTALÁNOS TARTALOM OLDAL STÍLUSOK */
+
+/* ========================================================================= */
+/* KAPCSOLAT ÉS ÁLTALÁNOS TARTALOM OLDALAK STÍLUSAI (KAPCSOLAT.HTML) */
+/* ========================================================================= */
+
 .content-page .container {
     padding: 60px 20px;
 }
@@ -351,320 +379,3 @@ footer {
     flex: 1;
     padding: 30px;
     background-color: var(--light-grey);
-    border-radius: 5px;
-}
-
-.kapcsolat-form h2, .gyik-container h2 {
-    font-size: 1.8em;
-    border-bottom: 2px solid var(--pink-highlight);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-
-/* ŰRLAP STÍLUSOK */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: var(--font-body);
-    font-size: 1em;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.cta-button {
-    /* Az index.html-ben definiált stílust használja */
-    width: 100%;
-}
-
-/* GYIK STÍLUSOK */
-.gyik-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px dotted #ccc;
-}
-
-.gyik-kerdes {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: var(--black);
-    cursor: pointer; /* Azt jelzi, hogy kattintható (ha később JS-sel kibontható lesz) */
-    margin-bottom: 5px;
-}
-
-.gyik-valasz {
-    margin-top: 5px;
-    padding-left: 10px;
-    font-size: 0.95em;
-    color: #555;
-}
-/* RÓLAM OLDAL STÍLUSOK */
-.rolam-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.rolam-container h1 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 3em;
-    color: var(--black);
-}
-
-.bemutatkozas {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-}
-
-.bemutatkozas-szoveg {
-    flex: 2;
-}
-
-.bemutatkozas-kep {
-    flex: 1;
-    text-align: right;
-}
-
-.bemutatkozas-kep img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 50%; /* Kör alakú kép a személyes hatásért */
-    border: 5px solid var(--pink-highlight);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.bemutatkozas-szoveg h2 {
-    font-size: 2em;
-    color: var(--pink-highlight);
-    margin-bottom: 20px;
-}
-
-/* FOLYAMAT SZEKCIÓ */
-.folyamat {
-    background-color: var(--light-grey);
-    padding: 50px;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.folyamat h2 {
-    margin-bottom: 40px;
-}
-
-.folyamat-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.folyamat-elem {
-    flex: 1;
-    text-align: center;
-}
-
-.icon-pink {
-    font-size: 3em;
-    color: var(--pink-highlight);
-    margin-bottom: 15px;
-}
-
-.folyamat-elem h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* ANYAGOK SZEKCIÓ */
-.anyagok {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.anyag-info {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-}
-
-.anyag-info h3 {
-    color: var(--pink-highlight);
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.anyag-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.anyag-info ul li {
-    margin-bottom: 10px;
-    font-size: 1em;
-}
-
-.anyag-info .cta-button {
-    margin-top: 20px;
-}
-/* TERMÉK RÉSZLETES OLDAL (Product Page) STÍLUSOK */
-.product-page {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.product-grid {
-    display: flex;
-    gap: 60px;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.product-gallery {
-    flex: 1; /* Bal oldal */
-}
-
-.product-details {
-    flex: 1; /* Jobb oldal */
-}
-
-/* KÉP GALÉRIA */
-.main-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-.thumbnail-images {
-    display: flex;
-    gap: 10px;
-}
-
-.thumbnail-images img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s, border 0.3s;
-}
-
-.thumbnail-images img:hover {
-    opacity: 1;
-    border: 2px solid var(--pink-highlight);
-}
-
-/* INFORMÁCIÓS RÉSZ */
-.breadcrumbs {
-    font-size: 0.85em;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.product-details h1 {
-    font-size: 2.5em;
-    margin-bottom: 5px;
-}
-
-.product-details .ar {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--pink-highlight);
-    margin-bottom: 25px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--light-grey);
-    margin: 30px 0;
-}
-
-/* VARIÁCIÓK */
-.variaciok label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.szin-opciok {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.szin-valaszto {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 0 2px transparent;
-    transition: box-shadow 0.3s;
-}
-
-.szin-valaszto.active, .szin-valaszto:hover {
-    box-shadow: 0 0 0 2px var(--pink-highlight);
-}
-
-/* KOSÁR INTERAKCIÓ */
-.kosar-interakcio {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.kosar-interakcio input[type="number"] {
-    width: 60px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.add-to-cart-btn {
-    flex: 1; /* A gomb kitölti a rendelkezésre álló helyet */
-    padding: 15px 30px;
-}
-
-/* LEÍRÁS */
-.termek-leiras h2, .termek-leiras h3 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.termek-leiras ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.termek-leiras ul li {
-    margin-bottom: 8px;
-}
-
-.termek-leiras .fa-check-circle {
-    color: var(--pink-highlight);
-    margin-right: 8px;
-}
