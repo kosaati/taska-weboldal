@@ -1,70 +1,87 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PK – Saját Készítésű Táskák | Modern, Minimalista Webáruház</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>PK – Kézzel készült táskák</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="index.html">PK</a>
-            <p>Saját Készítésű Táskák</p>
-        </div>
-       <nav>
-    <ul>
-        <li><a href="index.html" >Főoldal</a></li>
-        <li><a href="ujdonsagok.html">Újdonságok</a></li> 
-        <li><a href="termekek.html">Táskák</a></li> 
-        <li><a href="rolam.html">Rólam</a></li> 
-        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-    </ul>
-</nav>
-        <div class="cart-icon">
-            <a href="#" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-main">PK</span>
+      <span class="logo-sub">Saját Készítésű Táskák</span>
+    </a>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Stílus, ami a kezeid között született</h1>
-            <p>Fedezd fel a kézműves minőségű, minimalista PK táska kollekciót.</p>
-            <a href="ujdonsagok.html" class="cta-button">Fedezd fel az Újdonságokat!</a>
-        </div>
-        </section>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Főoldal</a>
+      <a href="ujdonsagok.html">Újdonságok</a>
+      <a href="termekek.html">Táskák</a>
+      <a href="rolam.html">Rólam</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
 
-    <section class="kategoriak">
-        <h2>Keresd meg a hozzád illő darabot</h2>
-        <div class="kategoria-grid">
-            <a href="termékek.html#noi" class="kategoria-kartya">
-                <img src="https://via.placeholder.com/300x400/F0B9C9/FFFFFF?text=Női+Táskák" alt="Női Táskák">
-                <h3>Női Táskák</h3>
-            </a>
-            <a href="termékek.html#ferfi" class="kategoria-kartya">
-                <img src="https://via.placeholder.com/300x400/E5E5E5/333333?text=Férfi+Táskák" alt="Férfi Táskák">
-                <h3>Férfi Táskák</h3>
-            </a>
-            <a href="termékek.html#nesz" class="kategoria-kartya">
-                <img src="https://via.placeholder.com/300x400/D0D8D0/333333?text=Neszesszerek" alt="Neszesszerek">
-                <h3>Neszesszerek</h3>
-            </a>
-        </div>
-    </section>
+    <a href="kosar.html" class="cart-link" aria-label="Kosár">
+      🛒
+    </a>
+  </div>
+</header>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
-            <div class="social-icons">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
-    </footer>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
 
-    <script src="js/main.js"></script>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <p class="hero-kicker">Kézzel készített táskák</p>
+      <h1>Kézzel Készített Táskák,<br>Szívvel Lélekkel</h1>
+      <p class="hero-sub">
+        Ahol a minőséget és a stílust találod – egyedi, pasztell PK táskák a mindennapokra.
+      </p>
+      <div class="hero-actions">
+        <a href="ujdonsagok.html" class="btn-primary">Fedezd fel az Újdonságokat!</a>
+        <a href="termekek.html" class="btn-secondary">Válogass a kollekcióból</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Kiemelt kategóriák</h2>
+    <div class="category-grid">
+      <a href="termekek.html#noi" class="category-card">
+        <div class="category-image category-noi"></div>
+        <h3>Női táskák</h3>
+        <p>Finom pasztell árnyalatok, nőies, letisztult formák.</p>
+      </a>
+      <a href="termekek.html#ferfi" class="category-card">
+        <div class="category-image category-ferfi"></div>
+        <h3>Férfi táskák</h3>
+        <p>Minimalista, praktikus darabok a mindennapi használatra.</p>
+      </a>
+      <a href="termekek.html#neszeszer" class="category-card">
+        <div class="category-image category-neszeszer"></div>
+        <h3>Neszesszerek</h3>
+        <p>Rendezett apróságok, utazáshoz és hétköznapokra.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 PK – Saját készítésű táskák. Minden jog fenntartva.</p>
+    <div class="footer-social">
+      <span>Instagram</span>
+      <span>Facebook</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
