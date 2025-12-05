@@ -3,129 +3,142 @@
 /* ========================================================================= */
 
 :root {
-    --white: #FFFFFF;
-    --light-grey: #F8F8F8; /* Szekciók elválasztására, háttérnek */
-    --black: #333333;
-    --pink-highlight: #F0B9C9; /* Babarózsaszín kiemelés */
-    --pink-darker: #E0A0B0; /* Gomb hover állapota */
-    --font-heading: 'Playfair Display', serif; /* Címekhez, elegancia */
-    --font-body: 'Lato', sans-serif; /* Szövegtörzshöz, olvashatóság */
+    --white: #FFFFFF;
+    --light-grey: #F8F8F8; /* Szekciók elválasztására, háttérnek */
+    --black: #333333;
+    --pink-highlight: #F0B9C9; /* Babarózsaszín kiemelés */
+    --pink-darker: #E0A0B0; /* Gomb hover állapota */
+    --font-heading: 'Playfair Display', serif; /* Címekhez, elegancia */
+    --font-body: 'Lato', sans-serif; /* Szövegtörzshöz, olvashatóság */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: var(--font-body);
     color: var(--black);
-    background-color: var(--white);
     line-height: 1.6;
+    
+    /* ---------------------------------------------------- */
+    /* 🎨 ÚJ HÁTTÉRKÉP BEÁLLÍTÁSA (varras_minta.png) */
+    /* ---------------------------------------------------- */
+    background-color: var(--white); 
+    background-image: url('varras_minta.png'); 
+    background-repeat: repeat; 
+    background-size: 200px 200px; /* A minta mérete */
+    background-attachment: fixed; 
 }
 
 /* KÖZÖS STÍLUSOK */
 a {
-    text-decoration: none;
-    color: var(--black);
-    transition: color 0.3s;
+    text-decoration: none;
+    color: var(--black);
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: var(--pink-highlight);
+    color: var(--pink-highlight);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 h1, h2, h3 {
-    font-family: var(--font-heading);
-    margin-bottom: 15px;
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
 }
 
 /* FEJLÉC (HEADER) */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--light-grey);
+    /* ---------------------------------------------------- */
+    /* 🎨 Fejléc fehér háttere (Felülírja a body mintáját) */
+    /* ---------------------------------------------------- */
+    background-color: var(--white);
+    z-index: 1000;
 }
 
 .logo a {
-    font-size: 2.5em;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--pink-highlight);
-    line-height: 1;
+    font-size: 2.5em;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--pink-highlight);
+    line-height: 1;
 }
 
 .logo p {
-    font-size: 0.8em;
-    margin-top: -5px;
-    font-weight: 300;
+    font-size: 0.8em;
+    margin-top: -5px;
+    font-weight: 300;
 }
 
 /* NAVIGÁCIÓ */
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    padding: 5px 0;
-    position: relative;
+    padding: 5px 0;
+    position: relative;
 }
 
 nav ul li a:after { /* Modern, minimalista aláhúzás */
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--pink-highlight);
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--pink-highlight);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 }
 
 nav ul li a:hover:after,
 nav ul li a.active:after {
-    width: 100%;
+    width: 100%;
 }
 
 .cart-icon {
-    font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 /* CTA GOMB (GLOBAL) */
 .cta-button {
-    display: inline-block;
-    background-color: var(--pink-highlight);
-    color: var(--white);
-    padding: 12px 30px;
-    margin-top: 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
-    text-align: center;
+    display: inline-block;
+    background-color: var(--pink-highlight);
+    color: var(--white);
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
 .cta-button:hover {
-    background-color: var(--pink-darker);
-    color: var(--white);
+    background-color: var(--pink-darker);
+    color: var(--white);
 }
 
 
@@ -134,148 +147,133 @@ nav ul li a.active:after {
 /* ========================================================================= */
 
 /* HERO SZEKCIÓ */
-/* ========================================================================= */
-/* HÁTTÉRKÉP A FŐOLDALRA (INDEX.HTML) */
-/* ========================================================================= */
+/* A hős szekció és más tartalomblokkok hátterének átlátszóvá tétele, 
+   hogy a body háttere látszódjon. */
+.hero-section, .kategoriak, .content-page .container, .kosar-osszegzes, .rolam-szekcio {
+    background-color: transparent; 
+}
 
-    .hero-section {
-    /* FEL KELL LÉPNI a CSS mappából a gyökérbe, hogy lásd a képet! */
-    background-image: url('../hatterkep.jpg'); 
-    
-    /* Ez garantálja a magasságot, hogy a kép látszódjon: */
+/* Töröltem az előző hero szekció háttérkép beállításokat, 
+   hogy a minta látszódjon, de meghagytam a szövegre vonatkozó stílusokat. */
+
+.hero-section {
     min-height: 50vh; 
     padding: 80px 20px; 
-    
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed;
-    /* ... többi kód, amit kaptál */
-}
-    
-    /* Beállítjuk, hogy a kép fedje le a teljes szekciót, torzítás nélkül */
-    background-size: cover; 
-    
-    /* A kép középre igazítása */
-    background-position: center; 
-    
-    /* Megakadályozza, hogy görgetéskor a kép görgessen */
-    background-attachment: fixed; 
-    
-    /* Árnyék/átfedés a kép fölött, hogy a fehér szöveg jól olvasható legyen */
     position: relative;
-    z-index: 1; /* A tartalom feljebb kerül */
+    z-index: 1;
 }
-
-/* Kép fölé helyezett sötét, pasztell átfedés (overlay) a jobb olvashatóságért */
+	
 .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Finom, rózsaszínes áttetsző réteg */
-    background-color: rgba(240, 185, 201, 0.4); /* F0B9C9 (pink-highlight) 40%-os áttetszőséggel */
-    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Finom, rózsaszínes áttetsző réteg */
+    background-color: rgba(240, 185, 201, 0.4); /* F0B9C9 (pink-highlight) 40%-os áttetszőséggel */
+    z-index: -1;
 }
 
 /* Biztosítjuk, hogy a szöveg fehér legyen és a z-index miatt látszódjon */
 .hero-section .container * {
-    color: var(--white);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Finom árnyék a kiemeléshez */
+    color: var(--white);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Finom árnyék a kiemeléshez */
 }
 
 /* Visszaállítjuk a gomb színét */
 .hero-section .cta-button {
-    background-color: var(--white);
-    color: var(--pink-highlight);
-    border: 2px solid var(--pink-highlight);
-    text-shadow: none;
+    background-color: var(--white);
+    color: var(--pink-highlight);
+    border: 2px solid var(--pink-highlight);
+    text-shadow: none;
 }
 
 .hero-section .cta-button:hover {
-    background-color: var(--pink-highlight);
-    color: var(--white);
-    border: 2px solid var(--white);
+    background-color: var(--pink-highlight);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 .hero {
-    background: url('https://via.placeholder.com/1600x600/F8F8F8/333333?text=Nagy+Hero+Kép') center/cover no-repeat;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: 40px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px 50px;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 50px;
+    border-radius: 5px;
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: var(--pink-highlight);
+    font-size: 3em;
+    color: var(--pink-highlight);
 }
 
 /* KIEMELT KATEGÓRIÁK */
 .kategoriak {
-    text-align: center;
-    padding: 40px 20px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .kategoria-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .kategoria-kartya {
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-    transition: opacity 0.3s;
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    transition: opacity 0.3s;
 }
 
 .kategoria-kartya:hover {
-    opacity: 0.9;
+    opacity: 0.9;
 }
 
 .kategoria-kartya img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 .kategoria-kartya:hover img {
-    transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 /* ========================================================================= */
 /* LÁBLÉC (FOOTER) */
 /* ========================================================================= */
 footer {
-    background-color: var(--light-grey);
-    color: var(--black);
-    padding: 20px 40px;
-    margin-top: 60px;
-    font-size: 0.9em;
+    /* ---------------------------------------------------- */
+    /* 🎨 Lábléc fehér háttere (Felülírja a body mintáját) */
+    /* ---------------------------------------------------- */
+    background-color: var(--white);
+    color: var(--black);
+    padding: 20px 40px;
+    margin-top: 60px;
+    font-size: 0.9em;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .social-icons a {
-    margin-left: 15px;
-    font-size: 1.2em;
+    margin-left: 15px;
+    font-size: 1.2em;
 }
 
 /* ========================================================================= */
@@ -283,123 +281,131 @@ footer {
 /* ========================================================================= */
 
 .termek-katalogus {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .katalogus-elrendezes {
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
 }
 
 /* 1. SZŰRŐ OLDALSÁV */
 .szuro-oldsav {
-    flex: 0 0 250px; 
-    padding: 20px;
-    background-color: var(--light-grey);
-    border-radius: 5px;
-    height: fit-content; 
+    flex: 0 0 250px; 
+    padding: 20px;
+    /* ---------------------------------------------------- */
+    /* 🎨 Az oldalsáv hátterét is átlátszóvá tesszük, 
+       hogy a minta jobban érvényesüljön */
+    /* ---------------------------------------------------- */
+    background-color: transparent; 
+    border-radius: 5px;
+    height: fit-content; 
 }
 
 .szuro-oldsav h3 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
 }
 
 .szuro-nav ul {
-    list-style: none;
+    list-style: none;
 }
 
 .szuro-nav li {
-    margin: 8px 0;
+    margin: 8px 0;
 }
 
 .szuro-nav a {
-    display: block;
-    padding: 5px;
+    display: block;
+    padding: 5px;
 }
 
 .szuro-nav a.active {
-    font-weight: 700;
-    color: var(--pink-highlight);
+    font-weight: 700;
+    color: var(--pink-highlight);
 }
 
 .szuro-oldsav hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
 }
 
-.egyeb-szuro-form label, 
+.egyeb-szuro-form label, 
 .egyeb-szuro-form select,
 .egyeb-szuro-form input[type="range"] {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .egyeb-szuro-form select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* 2. TERMÉK KÁRTYÁK */
 .termek-kartyak-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .termek-kartya {
-    text-align: center;
-    padding: 15px;
-    border: 1px solid var(--light-grey);
-    border-radius: 5px;
-    transition: box-shadow 0.3s;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    /* ---------------------------------------------------- */
+    /* 🎨 A kártyák is átlátszó háttérre váltanak, hogy a minta érvényesüljön */
+    /* ---------------------------------------------------- */
+    background-color: transparent; 
+    transition: box-shadow 0.3s;
 }
 
 .termek-kartya:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .termek-kartya img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .termek-kartya h3 {
-    font-size: 1.3em;
-    font-weight: 400;
-    margin-bottom: 5px;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .termek-kartya .ar {
-    font-weight: 700;
-    color: var(--pink-highlight);
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--pink-highlight);
+    margin-bottom: 10px;
 }
 
 .hozzaadas-gomb {
-    display: block;
-    background-color: var(--pink-highlight);
-    color: var(--white);
-    padding: 10px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    display: block;
+    background-color: var(--pink-highlight);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
 .hozzaadas-gomb:hover {
-    background-color: var(--pink-darker);
-    color: var(--white); 
+    background-color: var(--pink-darker);
+    color: var(--white); 
 }
 
 /* ========================================================================= */
@@ -407,364 +413,58 @@ footer {
 /* ========================================================================= */
 
 .content-page .container {
-    padding: 60px 20px;
+    padding: 60px 20px;
+    background-color: transparent; /* A minta látszódjon a tartalom alatt */
 }
 
 .content-page h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    color: var(--pink-highlight);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: var(--pink-highlight);
 }
 
 .intro-text {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 1.1em;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* KAPCSOLAT OLDAL GRID ELRENDEZÉSE */
 .kapcsolat-grid {
-    display: flex;
-    gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 .kapcsolat-form-container {
-    flex: 1;
-    padding: 30px;
-    border: 1px solid var(--light-grey);
-    border-radius: 5px;
+    flex: 1;
+    padding: 30px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    background-color: var(--white); /* A formok háttere fehér marad a jó olvashatóságért */
 }
 /* ========================================================================= */
 /* KOSÁR OLDAL STÍLUSOK (CART.HTML) */
 /* ========================================================================= */
 
 .kosar-oldal h1 {
-    text-align: left;
-    margin-bottom: 40px;
-    font-size: 3em;
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 3em;
 }
 
 .kosar-elrendezes {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .kosar-elemek {
-    flex: 2; /* Szélesebb a kosár elemeknek */
+    flex: 2; /* Szélesebb a kosár elemeknek */
 }
 
 .kosar-osszegzes {
-    flex: 1; /* Keskenyebb az összegzésnek */
-    background-color: var(--light-grey);
-    padding: 30px;
-    border-radius: 5px;
-}
-
-/* KOSÁR ELEM */
-.kosar-termek {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.kosar-termek:last-child {
-    border-bottom: none;
-}
-
-.kosar-kep {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-
-.termek-info {
-    flex-grow: 1;
-    margin-right: 20px;
-}
-
-.termek-info h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-}
-
-.termek-info .szin {
-    color: #888;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-.mennyiseg-valaszto input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.termek-ar {
-    font-weight: 700;
-    font-size: 1.1em;
-    color: var(--pink-highlight);
-    width: 100px;
-    text-align: right;
-}
-
-.eltavolitas-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #aaa;
-    font-size: 1em;
-    margin-left: 10px;
-    transition: color 0.3s;
-}
-
-.eltavolitas-btn:hover {
-    color: var(--pink-darker);
-}
-
-/* ÖSSZEGZÉS STÍLUSAI */
-.kosar-osszegzes h2 {
-    font-size: 1.5em;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.osszegzes-sor {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 1em;
-}
-
-.osszegzes-sor.vegosszeg {
-    padding-top: 15px;
-    border-top: 2px solid var(--pink-highlight);
-    margin-top: 20px;
-}
-
-.osszegzes-sor.vegosszeg h3 {
-    font-size: 1.5em;
-    color: var(--pink-highlight);
-    margin: 0;
-}
-
-.kosar-osszegzes .cta-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-.vissza-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.gyik-container {
-    flex: 1;
-    padding: 30px;
-    background-color: var(--light-grey);
-    /* ========================================================================= */
-/* PÉNZTÁR OLDAL STÍLUSOK (CHECKOUT.HTML) */
-/* ========================================================================= */
-
-.penztar-oldal .container {
-    padding: 60px 20px;
-}
-
-.penztar-oldal h1 {
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.breadcrumbs {
-    margin-bottom: 30px;
-    font-size: 0.9em;
-    color: #888;
-}
-
-.breadcrumbs a {
-    color: var(--pink-highlight);
-}
-
-.checkout-elrendezes {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
-.adatok-szallitas {
-    flex: 3; /* Szélesebb a formoknak */
-}
-
-.rendeles-osszegzes {
-    flex: 2; /* Keskenyebb az összegzésnek */
-    background-color: var(--light-grey);
-    padding: 30px;
-    border-radius: 5px;
-    position: sticky; /* Rögzítés a görgetésnél */
-    top: 20px;
-}
-
-.adatok-szallitas h2, .adatok-szallitas h3 {
-    font-family: var(--font-heading);
-    color: var(--pink-highlight);
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.adatok-szallitas h2 {
-    margin-top: 0;
-}
-
-/* ŰRLAP STÍLUSOK */
-.checkout-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Széles elemek (pl. utca, megjegyzés) teljes szélességen */
-.form-group:nth-of-type(3), 
-.form-group:nth-of-type(6),
-.form-group:nth-of-type(7) { 
-    grid-column: 1 / -1; 
-}
-
-.checkout-form label {
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 0.9em;
-}
-
-.checkout-form input:not([type="radio"]), 
-.checkout-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    font-family: var(--font-body);
-}
-
-.checkout-form input:focus, 
-.checkout-form textarea:focus {
-    border-color: var(--pink-highlight);
-    outline: none;
-}
-
-/* FIZETÉS VÁLASZTÓ */
-.fizetes-valaszto {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.radio-group {
-    display: flex;
-    align-items: center;
-    background-color: var(--white);
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 10px;
-    width: 18px;
-    height: 18px;
-    accent-color: var(--pink-highlight);
-}
-
-.radio-group i {
-    margin-right: 8px;
-    color: var(--pink-highlight);
-}
-
-.vissza-kosar {
-    grid-column: 1 / -1;
-    margin-top: 10px;
-}
-
-.vissza-kosar i {
-    margin-right: 5px;
-}
-
-/* RENDELÉS ÖSSZEGZÉS STÍLUSAI */
-.rendeles-osszegzes h2 {
-    font-size: 1.5em;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.osszegzes-termek-lista {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-.osszegzes-termek {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.osszegzes-termek img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 3px;
-    margin-right: 15px;
-}
-
-.osszegzes-termek .info {
-    flex-grow: 1;
-}
-
-.osszegzes-termek .info p {
-    margin: 0;
-    font-size: 0.95em;
-}
-
-.osszegzes-termek .info .ar {
-    font-weight: 700;
-    color: var(--pink-highlight);
-}
-
-.rendeles-osszegzes .osszegzes-sor {
-    margin-bottom: 10px;
-}
-
-.rendeles-osszegzes .cta-button {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    font-size: 1em;
-}
-
-.adatvedelmi {
-    text-align: center;
-    font-size: 0.8em;
-    color: #888;
-}
+    flex
