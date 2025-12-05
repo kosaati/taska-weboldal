@@ -1,114 +1,121 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Táskák – PK Kollekció | Webáruház</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Táskák – PK Kollekció | Webáruház</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="index.html">PK</a>
-            <p>Saját Készítésű Táskák</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Főoldal</a></li>
-                <li><a href="ujdonsagok.html">Újdonságok</a></li>
-                <li><a href="termekek.html">Táskák</a></li>
-                <li><a href="rolam.html">Rólam</a></li>
-                <li><a href="kapcsolat.html">Kapcsolat</a></li>
-            </ul>
-        </nav>
-        <div class="cart-icon">
-            <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </header>
+  <header>
+    <div class="logo">
+      <a href="index.html">PK</a>
+      <p>Saját Készítésű Táskák</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="ujdonsagok.html">Újdonságok</a></li>
+        <li><a href="termekek.html">Táskák</a></li>
+        <li><a href="rolam.html">Rólam</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <a href="kosar.html" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+    </div>
+  </header>
 
-    <main>
+  <main>
+    <section class="page-section">
+      <div class="container">
+
         <div class="termek-katalogus">
-            <h1>Táskakollekció</h1>
-            <p class="intro-text">Válogass a PK kézműves termékek teljes kollekciójából. Minden darab szeretettel, minőségi alapanyagokból készült.</p>
-            
-            <div class="katalogus-elrendezes">
-                <aside class="szuro-oldsav">
-                    <h3>Kategóriák</h3>
-                    <nav class="szuro-nav">
-                        <ul>
-                            <li><a href="#" class="szuro-link active" data-filter="osszes">Összes Táska</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="noi vall">Női Válltáskák</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="ferfi kezi">Férfi Kézitáskák</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="noi nesz">Neszesszerek</a></li>
-                        </ul>
-                    </nav>
-                    
-                    <hr>
-                    
-                    <h3>Egyéb szűrők</h3>
-                    <form class="egyeb-szuro-form">
-                        <label for="szin">Szín:</label>
-                        <select id="szin">
-                            <option value="osszes">Összes</option>
-                            <option value="rozsa">Rózsaszín</option>
-                            <option value="kek">Kék</option>
-                            <option value="szurke">Szürke</option>
-                        </select>
-                        
-                        <label for="ar-range">Ár:</label>
-                        <input type="range" id="ar-range" min="5000" max="50000" value="50000">
-                        <p>Max. ár: <span id="ar-ertek">50 000</span> Ft</p>
-                    </form>
-                </aside>
+          <h1>Táskakollekció</h1>
+          <p class="intro-text">
+            Válogass a PK kézműves termékek teljes kollekciójából. Minden darab szeretettel, minőségi alapanyagokból készült.
+          </p>
 
-                <section class="termek-kartyak-grid">
-                    
-                    <div class="termek-kartya" data-kategoria="noi vall" data-ar="24990">
-                        <a href="product-page.html">
-                            <img src="https://via.placeholder.com/300/F0B9C9/FFFFFF?text=Pasztell+Válltáska" alt="Rózsaszín Elegáns Válltáska">
-                            <h3>Pasztell Válltáska</h3>
-                        </a>
-                        <p class="ar">24 990 Ft</p>
-                        <a href="#" class="hozzaadas-gomb">Kosárba</a>
-                    </div>
-                    
-                    <div class="termek-kartya" data-kategoria="ferfi kezi" data-ar="32990">
-                        <a href="product-page.html">
-                            <img src="https://via.placeholder.com/300/6A8EAE/FFFFFF?text=Férfi+Kézitáska" alt="Sötétkék Férfi Kézitáska">
-                            <h3>Minimalista Aktatáska</h3>
-                        </a>
-                        <p class="ar">32 990 Ft</p>
-                        <a href="#" class="hozzaadas-gomb">Kosárba</a>
-                    </div>
+          <div class="katalogus-elrendezes">
+            <aside class="szuro-oldsav">
+              <h3>Kategóriák</h3>
+              <nav class="szuro-nav">
+                <ul>
+                  <li><a href="#" class="szuro-link active" data-filter="osszes">Összes Táska</a></li>
+                  <li><a href="#" class="szuro-link" data-filter="noi vall">Női Válltáskák</a></li>
+                  <li><a href="#" class="szuro-link" data-filter="ferfi kezi">Férfi Kézitáskák</a></li>
+                  <li><a href="#" class="szuro-link" data-filter="noi nesz">Neszesszerek</a></li>
+                </ul>
+              </nav>
 
-                    <div class="termek-kartya" data-kategoria="noi nesz" data-ar="11990">
-                        <a href="product-page.html">
-                            <img src="https://via.placeholder.com/300/FFFFFF/333333?text=Fehér+Neszesszer" alt="Fehér Kézműves Neszesszer">
-                            <h3>Elegáns Neszesszer</h3>
-                        </a>
-                        <p class="ar">11 990 Ft</p>
-                        <a href="#" class="hozzaadas-gomb">Kosárba</a>
-                    </div>
-                    
-                    </section>
-            </div>
-        </main>
+              <hr>
 
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <script src="script.js"></script>
-    </body>
-    </html>
+              <h3>Egyéb szűrők</h3>
+              <form class="egyeb-szuro-form">
+                <label for="szin">Szín:</label>
+                <select id="szin">
+                  <option value="osszes">Összes</option>
+                  <option value="rozsa">Rózsaszín</option>
+                  <option value="kek">Kék</option>
+                  <option value="szurke">Szürke</option>
+                </select>
+
+                <label for="ar-range">Ár:</label>
+                <input type="range" id="ar-range" min="5000" max="50000" value="50000">
+                <p>Max. ár: <span id="ar-ertek">50 000</span> Ft</p>
+              </form>
+            </aside>
+
+            <section class="termek-kartyak-grid">
+              <div class="termek-kartya" data-kategoria="noi vall" data-ar="24990">
+                <a href="product-page.html">
+                  <img src="https://via.placeholder.com/300/F0B9C9/FFFFFF?text=Pasztell+Válltáska" alt="Rózsaszín Elegáns Válltáska">
+                  <h3>Pasztell Válltáska</h3>
+                </a>
+                <p class="ar">24 990 Ft</p>
+                <a href="#" class="hozzaadas-gomb">Kosárba</a>
+              </div>
+
+              <div class="termek-kartya" data-kategoria="ferfi kezi" data-ar="32990">
+                <a href="product-page.html">
+                  <img src="https://via.placeholder.com/300/6A8EAE/FFFFFF?text=Férfi+Kézitáska" alt="Sötétkék Férfi Kézitáska">
+                  <h3>Minimalista Aktatáska</h3>
+                </a>
+                <p class="ar">32 990 Ft</p>
+                <a href="#" class="hozzaadas-gomb">Kosárba</a>
+              </div>
+
+              <div class="termek-kartya" data-kategoria="noi nesz" data-ar="11990">
+                <a href="product-page.html">
+                  <img src="https://via.placeholder.com/300/FFFFFF/333333?text=Fehér+Neszesszer" alt="Fehér Kézműves Neszesszer">
+                  <h3>Elegáns Neszesszer</h3>
+                </a>
+                <p class="ar">11 990 Ft</p>
+                <a href="#" class="hozzaadas-gomb">Kosárba</a>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
