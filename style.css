@@ -23,17 +23,18 @@ body {
   color: var(--black);
   line-height: 1.6;
 
-  background: url('varras_minta.png.jpg') center/cover no-repeat fixed;
+  background: url('varras_minta.png') center/cover no-repeat fixed;
   position: relative;
 }
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(240, 185, 201, 0.75);
+  background: rgba(240, 185, 201, 0.75); /* halvány rózsaszín overlay */
   z-index: -1;
   pointer-events: none;
 }
+
 
 
 /* KÖZÖS STÍLUSOK */
