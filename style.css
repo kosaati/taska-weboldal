@@ -413,3 +413,116 @@ footer {
     font-size: 0.95em;
     color: #555;
 }
+/* RÓLAM OLDAL STÍLUSOK */
+.rolam-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.rolam-container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+    color: var(--black);
+}
+
+.bemutatkozas {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.bemutatkozas-szoveg {
+    flex: 2;
+}
+
+.bemutatkozas-kep {
+    flex: 1;
+    text-align: right;
+}
+
+.bemutatkozas-kep img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 50%; /* Kör alakú kép a személyes hatásért */
+    border: 5px solid var(--pink-highlight);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bemutatkozas-szoveg h2 {
+    font-size: 2em;
+    color: var(--pink-highlight);
+    margin-bottom: 20px;
+}
+
+/* FOLYAMAT SZEKCIÓ */
+.folyamat {
+    background-color: var(--light-grey);
+    padding: 50px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.folyamat h2 {
+    margin-bottom: 40px;
+}
+
+.folyamat-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.folyamat-elem {
+    flex: 1;
+    text-align: center;
+}
+
+.icon-pink {
+    font-size: 3em;
+    color: var(--pink-highlight);
+    margin-bottom: 15px;
+}
+
+.folyamat-elem h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* ANYAGOK SZEKCIÓ */
+.anyagok {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.anyag-info {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.anyag-info h3 {
+    color: var(--pink-highlight);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.anyag-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.anyag-info ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.anyag-info .cta-button {
+    margin-top: 20px;
+}
