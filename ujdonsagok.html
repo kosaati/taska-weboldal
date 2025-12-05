@@ -29,67 +29,75 @@
         </div>
     </header>
 
-    <main>
-        <div class="termek-katalogus">
-            <h1>Újdonságok</h1>
-            <p class="intro-text">Fedezd fel a legújabb kézműves darabokat, melyek a legfrissebb pasztell trendeket követik.</p>
-            
-            <div class="katalogus-elrendezes">
-                <aside class="szuro-oldsav">
-                    <h3>Kategóriák</h3>
-                    <nav class="szuro-nav">
-                        <ul>
-                            <li><a href="#" class="szuro-link active" data-filter="osszes">Összes Újdonság</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="noi vall">Női Válltáskák</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="ferfi kezi">Férfi Kézitáskák</a></li>
-                            <li><a href="#" class="szuro-link" data-filter="noi nesz">Neszesszerek</a></li>
-                        </ul>
-                    </nav>
-                    
-                    <hr>
-                    
-                    <h3>Egyéb szűrők</h3>
-                    <form class="egyeb-szuro-form">
-                        <label for="szin">Szín:</label>
-                        <select id="szin">
-                            <option value="osszes">Összes</option>
-                            <option value="rozsa">Rózsaszín</option>
-                            <option value="kek">Kék</option>
-                            <option value="szurke">Szürke</option>
-                        </select>
-                        
-                        <label for="ar-range">Ár:</label>
-                        <input type="range" id="ar-range" min="5000" max="50000" value="50000">
-                        <p>Max. ár: <span id="ar-ertek">50 000</span> Ft</p>
+   <main>
+  <section class="page-section">
+    <div class="container">
 
-                        <label for="datum">Készítési Dátum</label>
-                        <p>Csak a legutóbbi 3 hónap termékei</p>
-                        
-                    </aside>
+      <div class="termek-katalogus">
+        <h1>Újdonságok</h1>
+        <p class="intro-text">
+          Fedezd fel a legújabb kézműves darabokat, melyek a legfrissebb pasztell trendeket követik.
+        </p>
 
-                    <section class="termek-kartyak-grid">
-                        
-                        <div class="termek-kartya" data-kategoria="noi vall" data-ar="25990">
-                            <a href="product-page.html">
-                                <img src="https://via.placeholder.com/300/F0B9C9/FFFFFF?text=ÚJ+Rózsaszín+Válltáska" alt="Új Rózsaszín Elegáns Válltáska">
-                                <h3>Új Pasztell Válltáska</h3>
-                            </a>
-                            <p class="ar">25 990 Ft</p>
-                            <a href="#" class="hozzaadas-gomb">Kosárba</a>
-                        </div>
-                        
-                        <div class="termek-kartya" data-kategoria="ferfi kezi" data-ar="34990">
-                            <a href="product-page.html">
-                                <img src="https://via.placeholder.com/300/6A8EAE/FFFFFF?text=ÚJ+Férfi+Táska" alt="Új Sötétkék Férfi Táska">
-                                <h3>Modern Aktatáska</h3>
-                            </a>
-                            <p class="ar">34 990 Ft</p>
-                            <a href="#" class="hozzaadas-gomb">Kosárba</a>
-                        </div>
+        <div class="katalogus-elrendezes">
+          <aside class="szuro-oldsav">
+            <h3>Kategóriák</h3>
+            <nav class="szuro-nav">
+              <ul>
+                <li><a href="#" class="szuro-link active" data-filter="osszes">Összes Újdonság</a></li>
+                <li><a href="#" class="szuro-link" data-filter="noi vall">Női Válltáskák</a></li>
+                <li><a href="#" class="szuro-link" data-filter="ferfi kezi">Férfi Kézitáskák</a></li>
+                <li><a href="#" class="szuro-link" data-filter="noi nesz">Neszesszerek</a></li>
+              </ul>
+            </nav>
 
-                        </section>
-                </div>
-            </main>
+            <hr>
+
+            <h3>Egyéb szűrők</h3>
+            <form class="egyeb-szuro-form">
+              <label for="szin">Szín:</label>
+              <select id="szin">
+                <option value="osszes">Összes</option>
+                <option value="rozsa">Rózsaszín</option>
+                <option value="kek">Kék</option>
+                <option value="szurke">Szürke</option>
+              </select>
+
+              <label for="ar-range">Ár:</label>
+              <input type="range" id="ar-range" min="5000" max="50000" value="50000">
+              <p>Max. ár: <span id="ar-ertek">50 000</span> Ft</p>
+
+              <label for="datum">Készítési Dátum</label>
+              <p>Csak a legutóbbi 3 hónap termékei</p>
+            </form>
+          </aside>
+
+          <section class="termek-kartyak-grid">
+            <div class="termek-kartya" data-kategoria="noi vall" data-ar="25990">
+              <a href="product-page.html">
+                <img src="https://via.placeholder.com/300/F0B9C9/FFFFFF?text=ÚJ+Rózsaszín+Válltáska" alt="Új Rózsaszín Elegáns Válltáska">
+                <h3>Új Pasztell Válltáska</h3>
+              </a>
+              <p class="ar">25 990 Ft</p>
+              <a href="#" class="hozzaadas-gomb">Kosárba</a>
+            </div>
+
+            <div class="termek-kartya" data-kategoria="ferfi kezi" data-ar="34990">
+              <a href="product-page.html">
+                <img src="https://via.placeholder.com/300/6A8EAE/FFFFFF?text=ÚJ+Férfi+Táska" alt="Új Sötétkék Férfi Táska">
+                <h3>Modern Aktatáska</h3>
+              </a>
+              <p class="ar">34 990 Ft</p>
+              <a href="#" class="hozzaadas-gomb">Kosárba</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
 
             <footer>
                 <div class="container">
