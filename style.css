@@ -313,3 +313,103 @@ footer {
     background-color: var(--pink-darker);
     color: var(--white); /* Felülírja az alap hover stílust */
 }
+/* ÁLTALÁNOS TARTALOM OLDAL STÍLUSOK */
+.content-page .container {
+    padding: 60px 20px;
+}
+
+.content-page h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: var(--pink-highlight);
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* KAPCSOLAT OLDAL GRID ELRENDEZÉSE */
+.kapcsolat-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.kapcsolat-form-container {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.gyik-container {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+}
+
+.kapcsolat-form h2, .gyik-container h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--pink-highlight);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* ŰRLAP STÍLUSOK */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.cta-button {
+    /* Az index.html-ben definiált stílust használja */
+    width: 100%;
+}
+
+/* GYIK STÍLUSOK */
+.gyik-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.gyik-kerdes {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--black);
+    cursor: pointer; /* Azt jelzi, hogy kattintható (ha később JS-sel kibontható lesz) */
+    margin-bottom: 5px;
+}
+
+.gyik-valasz {
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 0.95em;
+    color: #555;
+}
