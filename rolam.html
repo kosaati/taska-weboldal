@@ -1,47 +1,113 @@
+<!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rólam – PK Táskák</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rólam – PK Saját Készítésű Táskák</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<div class="logo">
-<h1 class="brand-title">PK táskák</h1>
-<p class="tag">kézzel készített női táskák</p>
-</div>
-<nav class="main-nav">
-<a href="index.html">Főoldal</a>
-<a href="rolam.html" class="active">Rólam</a>
-<a href="galeria.html">Termékek</a>
-<a href="kapcsolat.html">Kapcsolat</a>
-<a href="kosar.html">Kosár (<span id="cart-count">0</span>)</a>
-</nav>
-</div>
-</header>
 
+    <header>
+        <div class="logo">
+            <a href="index.html">PK</a>
+            <p>Saját Készítésű Táskák</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="újdonságok.html">Újdonságok</a></li>
+                <li><a href="termékek.html">Táskák</a></li>
+                <li><a href="rólunk.html" class="active">Rólam</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" aria-label="Kosár"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </header>
+    
+    <main class="content-page">
+        <div class="container rolam-container">
+            
+            <h1>A PK Története</h1>
+            
+            <section class="bemutatkozas">
+                <div class="bemutatkozas-szoveg">
+                    <h2>Pálóczi Katalin vagyok, a PK alapítója.</h2>
+                    <p>Egyedi, saját készítésű táskák tervezésével és gyártásával foglalkozom. Minden egyes táska a szenvedélyemből születik, és a kézműves minőségbe vetett hitet képviseli.</p>
+                    <p>Számomra a táska nem csak egy tárolóeszköz, hanem a stílus és a személyiség kifejezője. Célom, hogy olyan tartós, funkcionális és egyben modern, minimalista darabokat alkossak, amelyek hűséges társai lesznek a mindennapokban.</p>
+                </div>
+                <div class="bemutatkozas-kep">
+                    <img src="https://via.placeholder.com/400x400/F0B9C9/FFFFFF?text=Pálóczi+Katalin" alt="Pálóczi Katalin portré">
+                </div>
+            </section>
+            
+            <section class="folyamat">
+                <h2>A Kézműves Minőség: Hogyan készül egy PK táska?</h2>
+                
+                <div class="folyamat-grid">
+                    
+                    <div class="folyamat-elem">
+                        <i class="fas fa-magic icon-pink"></i>
+                        <h3>1. Tervezés és Mintázás</h3>
+                        <p>Minden táska egy gondos tervvel indul. Megrajzolom a formát, funkciót, és elkészítem a precíz szabásmintákat, hogy a végeredmény tökéletesen illeszkedjen az elképzeléshez.</p>
+                    </div>
 
-<main class="content container">
-<h2 class="section-title">Rólam</h2>
-<div class="about">
-<div class="about-photo" aria-hidden="true"></div>
-<div class="about-text">
-<p>Üdvözöllek! Én vagyok Panni, a PK táskák készítője. Szenvedélyem a textúrák, a színek és a praktikusság. Minden táskát kézzel varrok és tesztelek. Hiszem, hogy egy lány táskája nemcsak tárgy, hanem kifejezése az egyéniségnek.</p>
-</div>
-</div>
-</main>
+                    <div class="folyamat-elem">
+                        <i class="fas fa-scissors icon-pink"></i>
+                        <h3>2. Precíz Anyagválasztás és Szabás</h3>
+                        <p>Kizárólag tartós, prémium minőségű anyagokat választok. Az anyagokat a minták alapján kézzel vagy nagy pontosságú gépekkel vágom ki, garantálva az alkatrészek tökéletes illeszkedését.</p>
+                    </div>
+                    
+                    <div class="folyamat-elem">
+                        <i class="fas fa-sewing-machine icon-pink"></i>
+                        <h3>3. Varrás és Összeállítás</h3>
+                        <p>A PK minőség a varrásban rejlik. Professzionális varrógépen, erős cérnával, dupla és megerősített varrással illesztem össze az alkatrészeket, biztosítva a tartósságot.</p>
+                    </div>
+                    
+                    <div class="folyamat-elem">
+                        <i class="fas fa-check-circle icon-pink"></i>
+                        <h3>4. Befejezés és Minőségellenőrzés</h3>
+                        <p>A pántok felhelyezése, a bélés rögzítése és egy alapos minőségellenőrzés zárja a folyamatot. Egy táska elkészítése átlagosan 4-8 órát vesz igénybe.</p>
+                    </div>
+                </div>
+            </section>
 
+            <section class="anyagok">
+                <h2>Miből és mennyi idő alatt készül?</h2>
+                
+                <div class="anyag-info">
+                    <h3>Kiváló Minőségű Alapanyagok</h3>
+                    <ul>
+                        <li>**Bőr / Bőrhatású Anyagok:** Tartós, prémium minőségű anyagok a hosszú élettartamért és elegáns textúráért.</li>
+                        <li>**Bélés:** Erős, könnyen tisztítható belső anyagok, melyek harmonizálnak a pasztell designnal.</li>
+                        <li>**Kiegészítők:** Megbízható fém cipzárak, karabinerek és csatok a modern megjelenésért.</li>
+                    </ul>
+                </div>
+                
+                <div class="anyag-info">
+                    <h3>Idő és Érték</h3>
+                    <p>Mivel minden PK táska **kézzel, egyedi odafigyeléssel** készül, nem gyáripari tömegtermékről van szó. Ez a gondos folyamat garantálja, hogy a kezedbe kerülő PK táska egy egyedi, tartós műalkotás legyen.</p>
+                    <a href="termékek.html" class="cta-button">Vásárlás és Kollekció megtekintése</a>
+                </div>
+            </section>
 
-<footer class="site-footer">
-<div class="container">
-<p>© 2025 PK táskák – Minden jog fenntartva.</p>
-</div>
-</footer>
+        </div>
+    </main>
 
-
-<script src="script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 PK – Pálóczi Katalin | Minden jog fenntartva.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
