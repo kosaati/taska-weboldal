@@ -433,11 +433,13 @@ footer {
 .rolam-foto {
   max-width: 260px;
   width: 100%;
+  height: auto;
   border-radius: 12px;
   display: block;
   margin-top: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
+
 
 /* ========================================================================= */
 /* KAPCSOLAT / RÓLAM GRID */
