@@ -597,3 +597,11 @@ footer {
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .rolam-foto {
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
