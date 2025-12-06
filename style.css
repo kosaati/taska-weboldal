@@ -604,4 +604,104 @@ footer {
     margin-right: auto;
   }
 }
+/* HEADER FIX – LOGO, MENÜ, KOSÁR EGY SORBAN */
+
+.site-header {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* menü vízszintesen, ne törjön szét kicsi távolságoknál sem */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+}
+
+/* kosár ikon egy fix szélességű dobozban, hogy ne essen új sorba */
+.cart-link {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* MOBILNÁL SZEBB ELRENDEZÉS */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 8px;
+  }
+
+  .logo {
+    margin-right: 16px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+/* HEADER FIX – LOGO, MENÜ, KOSÁR EGY SORBAN */
+
+.site-header {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* menü vízszintesen, ne törjön szét kicsi távolságoknál sem */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-nav a {
+  font-size: 0.95rem;
+}
+
+/* kosár ikon egy fix szélességű dobozban, hogy ne essen új sorba */
+.cart-link {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* MOBILNÁL SZEBB ELRENDEZÉS */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 8px;
+  }
+
+  .logo {
+    margin-right: 16px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
 
