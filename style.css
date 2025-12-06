@@ -1124,3 +1124,112 @@ footer {
   margin-top: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
+/* Tablet nézethez (<= 900px) */
+@media (max-width: 900px) {
+  .header-inner,
+  header nav ul {
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    margin: 4px 8px;
+  }
+
+  .hero-inner {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .katalogus-elrendezes,
+  .checkout-elrendezes,
+  .kosar-elrendezes,
+  .kapcsolat-grid,
+  .termek-fo-info {
+    flex-direction: column;
+  }
+
+  .szuro-oldsav,
+  .kosar-osszegzes,
+  .rendeles-osszegzes,
+  .kapcsolat-form-container,
+  .gyik-container {
+    width: 100%;
+  }
+}
+
+/* Telefon nézethez (<= 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header {
+    padding: 10px 16px;
+  }
+
+  .logo p {
+    display: none; /* csak a PK logó marad */
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section,
+  .page-section {
+    padding: 32px 0 40px;
+  }
+
+  .page-section .container {
+    padding: 20px 16px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .termek-katalogus,
+  .termek-oldal-elrendezes,
+  .checkout-elrendezes,
+  .kosar-elrendezes,
+  .kapcsolat-grid,
+  .rolam-szekcio {
+    gap: 20px;
+  }
+
+  .kosar-termek {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .mennyiseg-valaszto {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .termek-ar {
+    text-align: left;
+  }
+
+  .checkout-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
