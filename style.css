@@ -1233,3 +1233,59 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  .hero-inner {
+    padding: 40px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .katalogus-elrendezes,
+  .checkout-elrendezes,
+  .kosar-elrendezes,
+  .kapcsolat-grid,
+  .termek-fo-info,
+  .rolam-szekcio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .szuro-oldsav,
+  .kosar-osszegzes,
+  .rendeles-osszegzes,
+  .kapcsolat-form-container,
+  .gyik-container {
+    width: 100%;
+  }
+
+  .kosar-termek {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  header {
+    padding: 10px 12px;
+  }
+
+  .logo p {
+    display: none;
+  }
+
+  .page-section .container {
+    padding: 20px 14px;
+  }
+}
